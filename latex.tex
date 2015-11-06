@@ -1,49 +1,321 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf130
-{\fonttbl\f0\fmodern\fcharset0 Courier;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\sl280\partightenfactor0
+\author{Hubert Kiechle}
+\title{Beispiel einer LaTeX-Datei}
+\date{} %hier können Sie ein Datum eingeben, auch leer, sonst wird es
+         %automatisch erzeugt
+\maketitle % erzeugt den Kopf
 
-\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 %% Erl\'e4uterungen zu den Befehlen erfolgen unter\
-%% diesem Beispiel.\
-\
-\\documentclass\{scrartcl\}\
-\
-\\usepackage[utf8]\{inputenc\}\
-\\usepackage[T1]\{fontenc\}\
-\\usepackage\{lmodern\}\
-\\usepackage[ngerman]\{babel\}\
-\\usepackage\{amsmath\}\
-\
-\\title\{Ein Testdokument\}\
-\\author\{Otto Normalverbraucher\}\
-\\date\{5. Januar 2004\}\
-\\begin\{document\}\
-\
-\\maketitle\
-\\tableofcontents\
-\\section\{Einleitung\}\
-\
-Hier kommt die Einleitung. Ihre \'dcberschrift kommt\
-automatisch in das Inhaltsverzeichnis.\
-\
-\\subsection\{Formeln\}\
-\
-\\LaTeX\{\} ist auch ohne Formeln sehr n\'fctzlich und\
-einfach zu verwenden. Grafiken, Tabellen,\
-Querverweise aller Art, Literatur- und\
-Stichwortverzeichnis sind kein Problem.\
-\
-Formeln sind etwas schwieriger, dennoch hier ein\
-einfaches Beispiel.  Zwei von Einsteins\
-ber\'fchmtesten Formeln lauten:\
-\\begin\{align\}\
-E &= mc^2                                  \\\\\
-m &= \\frac\{m_0\}\{\\sqrt\{1-\\frac\{v^2\}\{c^2\}\}\}\
-\\end\{align\}\
-Aber wer keine Formeln schreibt, braucht sich\
-damit auch nicht zu besch\'e4ftigen.\
-\\end\{document\}\
-}
+
+\section*{Einleitung}  % *= ohne Nummer
+
+In dieser Datei sind einige Beispiele für Anwendungen von LaTeX
+enthalten. Es handelt sich aber keineswegs um eine echte Einführung.
+Einziges Ziel ist es eine Vorlage zu liefern, die als Gerüst für eine
+in LaTeX verfasste Ausarbeitung dienen kann. Dazu finden sich Beispiele
+für Formatierungsbefehle und den Mathematiksatz.
+
+Wichtig ist die Tatsache, dass der eingetippte Text
+\glqq übersetzt\grqq\ werden muss. Um diese Datei zu nutzen ist es
+zweckmäßig den Quelltext mit der Übersetzung zu vergleichen, um einige
+Effekte zu verstehen.
+
+Das Zeichen \% % jfgakerjrgnfaLV
+im Quelltext markiert einen Kommentar. Alles was hinter diesem Zeichen
+in derselben Zeile steht, wird beim \"ubersetzen ignoriert.
+
+Befehle beginnen immer mit $\backslash$, etwa $\backslash$hspace,
+Argumente werden mit $\{$ und $\}$ geklammert.
+
+
+Jede LaTeX-Datei beginnt mit einer Prämbel in der nur Befehle
+eingegeben werden können. Die Bedeutung der benutzten Befehle in
+dieser Datei ist in der LaTeX-Datei als Kommentar kurz angedeutet.
+
+\begin{itemize}
+\item $\backslash$begin$\{$document$\}$ markiert den Punkt ab dem Text
+eingegeben werden kann.
+\item $\backslash$end$\{$document$\}$ beendet den Text. Was nach diesem
+Befehl steht, wird beim übersetzen ignoriert.
+\end{itemize}
+
+
+Umlaute erhält man durch \"a, wenn (wie hier) das Packet ngerman
+geladen ist durch "a, und wenn  (wie hier) das Packet ``inputenc'' mit
+``latin1'' (oder ``utf8'')geladen ist auch durch ä. Entsprechend \ss, "s, ß
+
+
+\section{Text ...}
+
+... wird einfach eingetippt. Leerzeichen trennen wie üblich Wörter,
+{\color{blue}die Anzahl ist        egal.}
+Auch Zeilenumbrüche im Quelltext werden ignoriert.
+Zeilenumbrüche macht das System
+selbständig. Ein neuer Absatz entsteht, wenn man im Quelltext eine
+
+Zeile frei lässt.  
+
+Um Wortabstände und Zeilenabstände künstlich zu verändern gibt es die
+Befehle
+$\backslash$hspace \hspace{9mm} (siehe Quelltext) und 
+$\backslash$vspace \vspace{10mm}
+die man aber selten braucht. Man beachte, dass der zweite Befehl erst
+beim folgenden Zeilenumbruch wirkt. Er wird eigentlich nur zwischen
+
+\vspace{10mm}
+Absätzen und im Mathematiksatz eingesetzt.\\  % neue Zeile ohne Absatz
+\textbf{Empfehlung:} Sparsam (oder gar nicht) benutzen!
+
+\subsection{Schriftgröße}
+
+Man kann die Größe der Buchstaben ändern durch:
+
+{\large groß}, {\LARGE größer}, {\huge noch größer} und {\small klein}
+oder {\tiny winzig} 
+
+\subsection{Schriftart}
+
+Um im Text Teil hervorzuheben kann man 
+
+\textit{kursive Schrift}
+\quad % = Abstand ca. 3x Leerzeichen
+\textbf{fett}
+\quad
+\texttt{Schreibmaschinen-Schrift} 
+\quad
+\textsc{Kapitälchen}
+\quad
+\textbf{ \textit{Test}}
+
+benutzen.
+
+\paragraph{Farben}
+\textcolor{darkred}{gehen} \textcolor{darkgreen}{so}.
+Dazu braucht man aber die Definitionen aus der Präambel.
+
+\subsection*{Strukturierung}
+
+Möglichkeiten zur Strukturierung  erkennen Sie im obigen Text. Dazu
+müssen Sie stets den Quelltext mit dem Ergebnis des Übersetzens
+vergleichen.
+
+Die wichtigesten Befehle sind
+
+\bigskip % vergrößerter Zeilenabstand, auch \smallskip, \medskip
+
+\begin{tabular}{lr|c} %l=left; auch c=center, r=right
+Befehl & Nummerierung & Bemerkung \\
+\hline
+  $\backslash$section$\{$Überschrift$\}$ 
+& ja
+\\  
+$\backslash$section*$\{$Überschrift$\}$  
+& nein
+\\ $\backslash$subsection$\{$Unterüberschrift$\}$ & ja
+\\ $\backslash$subsection*$\{$Unterüberschrift$\}$
+& nein
+\\ $\backslash$paragraph$\{$Überschrift$\}$  
+& nein & keine neue Zeile
+\end{tabular}
+
+\paragraph{Kommentare zur Tabelle:}
+$\{$lr|c$\}$ bedeutet, dass die erste Spalte linksbündig, die zweite
+Spalte rechtsbündig, dann eine Linie und die dritte Spalte zentriert
+gesetzt wird.
+
+Das Zeichen \& wird als Tabulator benutzt, $\backslash\backslash$
+markiert das Ende der Zeile.
+
+
+\section{Mathematik}
+
+Mathematische Symbole und Formeln werden immer zwischen \$ gesetzt;
+etwa $P$ oder $(P,\mathfrak{G})$ und nicht P. Will man eine Formel
+absetzen, so
+schreibt man 
+\[
+\sin^{1+1}x+\cos^2x=1 \mbox{\quad für alle } x\in\mathbb R\ \ nicht so
+\]
+Wichtig sind \glqq Umgebungen\grqq. Einige Beispiele
+\begin{equation}
+  \label{test} % setzt eine Marke
+  \int_1^\infty\frac{1}{x^2}=\arctan\frac\pi4
+=\sum_{k=1}^\infty\left(\frac{1}{2}\right)^k
+\end{equation}
+liefert eine numerierte Gleichung,  auf die durch 
+\eqref{test} auch \ref{test} Bezug 
+genommen werden kann. Beachte die Benutzung von
+$\backslash$left und $\backslash$right 
+um die Klammern automatisch(!) auf die richtige Größe zu bringen.
+Gleichungssysteme erhält man durch
+  \begin{eqnarray*} % *= ohne Nummerierung
+    \langle m,c\rangle&:=&\{(x_1,x_2)\in K^2;\; x_2=mx_1+c\} \\
+    \langle c\rangle&:=&\{(x_1,x_2)\in K^2;\; x_1=c\}
+  \end{eqnarray*}
+ohne Nummern, oder mit
+\begin{eqnarray}
+  \label{eq:test2} % Marke für erste Gleichung
+  S^2 &:= &\left\{(x_1,x_2,x_3)\in\mathbb R^3;\,
+x_1^2+x_2^2+(x_3-\frac12)^2=\frac14\right\}\\
+  \label{eq:test3} % Marke für zweite Gleichung
+S^-&:=&\left\{(x_1,x_2,x_3)\in S^2;\,x_3<\frac12\right\},
+\end{eqnarray}
+Das Zeichen \& wird als Tabulator benutzt, $\backslash\backslash$
+markiert das Ende der Zeile.
+\\ 
+Nach Gl.~\eqref{eq:test3} gilt \dots
+\qquad
+--- vgl. mit \ref{eq:test3}
+
+Um mathematische Standard-Abkürzungen richtig zu setzen schreibt man
+
+$\mbox{GL}(n,K)$ nicht etwa $GL(n,K)$.
+
+Noch besser ist es ein Macro zu definieren, d.\,i.\ ein
+selbstdefinierter Befehl:
+
+% \DeclareMathOperator{\GL}{GL} 
+% der ist in der Präambel zu finden
+% weil er hier nicht stehen kann!
+
+Dann kann man $\GL(n,K)$ schreiben.
+
+Das ist dann schon etwas für Experimentierfreudige oder für
+Fortgeschrittene.
+% (aber wie sollte man ohne Experimentierfreude vorwärts kommen?)
+
+
+\paragraph{Vordefiniert sind} 
+$\N, \Z, \Q, \R, \C, \cP$
+
+Weitere können Sie leicht selbst definieren.
+
+
+
+
+
+\section{Zeichen und Listen}
+
+Einige Beispiele
+
+\begin{itemize}
+\item \textit{Griechische Buchstaben:} $\alpha, \beta, \gamma, \dots, \phi,
+\psi$ und große $\Gamma, \Delta, \dots, \Phi, \Psi$
+
+\item \textbf{Einige Zeichen:} $\cap, \cup, \subseteq, \setminus,
+  \times, \otimes, \le, \ge, \in, \parallel, \perp, \angle$
+\end{itemize}
+und eine nummerierte Liste
+\begin{enumerate}
+\item in der 
+\item aber
+\item nichts steht
+  \begin{enumerate}
+  \item Dennoch hat sie 
+  \item eine Unterliste
+  \end{enumerate}
+\item 
+  \begin{itemize}
+  \item Die nicht nummeriert sein muss
+    \begin{itemize}
+    \item und ihrerseite Unterlisten haben kann
+    \item usw.
+    \end{itemize}
+  \end{itemize}
+
+\end{enumerate}
+
+Wenn man (wie hier) das Packet ``enumerate'' geladen hat, kann man die
+Ausgestaltung der Nummerierung leichter gestalten.
+
+\begin{enumerate}[\bfseries (E1)]
+\item M\"oglich sind
+  \begin{enumerate}[A.)]
+  \item 1
+  \item a
+  \item A
+  \item i
+  \item I
+  \end{enumerate}
+  \item jeweils mit Klammern, Punkten, Kommata usw.
+\end{enumerate}
+
+\begin{description}
+\item [Test] hier kommt der Text
+\item[Test II] nächster Punkt
+\item[Item] 
+\end{description}
+
+\section{Satz --- Beweis}
+
+Mathematische Texte sind durch Definition, Satz, Beweis usw. tiefer
+strukturiert als typische andere Texte. Und so kann man das machen:
+
+\begin{definition}
+  Dies ist eine Definition.
+\end{definition}
+
+
+\begin{satz}\label{s:satz1}
+  So sieht dann ein Satz aus.
+\end{satz}
+
+Und der kann referenziert werden durch Satz~\ref{s:satz1} 
+
+\begin{beweis}
+  Hier steht der Beweis.
+\end{beweis}
+
+Auch
+
+\begin{beweis}[von Satz~\ref{s:satz1}]
+  wenn man später darauf zurück kommen will.
+\end{beweis}
+
+
+\begin{bemerkung}
+  %Wir bemerken nichts weiter!
+So kann man Literatur zitieren, nach \cite{Heu03} gilt. Oder auch
+nach  \cite[35.6]{Heu03}. 
+
+\cite{GM-GM}
+\end{bemerkung}
+
+
+\section{Satznummerierung}
+
+Im neuen Abschnitt wird neu nummeriert; oder fortlaufende, wenn
+\texttt{[section]} nicht gesetzt ist.
+
+\begin{satz}[von W. Ichtig]
+  Noch eine Satz.
+\end{satz}
+
+
+\section{Grafiken}
+
+Damit die Grafik läuft müssen Sie die Datei  \texttt{graph.pdf}
+herunterladen und in das Verzeichnis mit \texttt{Beispiel.tex}
+kopieren. 
+
+ % \begin{center}
+ %   \includegraphics[scale=.8]{graph.pdf}
+ % \end{center}
+
+% um es auszuprobieren: Kommentarzeichen entfernen!
+% geht so nur mit pdf-LaTeX
+% man kann auch  jpg Graphiken benutzen
+
+\begin{thebibliography}{99}
+\bibitem{Heu03}
+ \textsc{Heuser}, Harro:
+  \newblock \emph{Lehrbuch der Analysis}.
+  \newblock 15. Aufl.
+  \newblock Vieweg-Verlag, Braunschweig-Wiesbaden, 2003
+
+\bibitem{GM-GM}
+\textsc{Gr{\"o}ger}, Detlef ; \textsc{Marti}, Kurt:
+\newblock \emph{Grundkurs Mathematik für Ingenieure, Natur- und
+  Wirtschaftswissenschaftler}.
+\newblock 2.~Aufl.
+\newblock Physica-Verlag, 2004
+\end{thebibliography}
+
