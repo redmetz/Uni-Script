@@ -1,0 +1,32 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{graphicx}
+\title{Lineare Algebra - Komplexe Uhr}
+\author{Tobias Raaf}
+\begin{document}
+\Large \textbf{Komplexe Uhr}\\\\
+\normalsize
+\includegraphics{C:/Users/Tobias/Desktop/Git-Projekte/Skript/Mathe/KomplexeUhr}
+\\\\\\
+\textbf{Fragestellung:} Für welchen Winkel ist die Uhrzeit Minuten-Stunden-Symmetrisch? (Bsp. 12:12 Uhr)\\
+$z_g$ bilde den großen Zeiger ab, $z_k$ bilde den kleinen Zeiger ab.\\
+Also: Für welchen Winkel $\varphi$ ist $z_g=z_k$?\\
+$z_k=1*e^{i12\varphi}$\\
+$z_g=1*e^{i\varphi}$\\
+$\Rightarrow$$z_k=z_g$ $\Leftrightarrow$ $1*e^{i\varphi}=1*e^{i12\varphi}$\\
+$\Leftrightarrow$ $12\varphi=\varphi$ oder $12\varphi=\varphi+2\pi$, oder...\\
+$\Leftrightarrow$ $12\varphi=\varphi +k*2\pi$\\
+$\Leftrightarrow$ $11\varphi=k*2\pi$\\
+$\Leftrightarrow$ $\varphi=k*\dfrac{2\pi}{11}$\\
+$\Leftrightarrow$ $\varphi\in\{0*\dfrac{2\pi}{11}, 1*\dfrac{2\pi}{11}, 2*\dfrac{2\pi}{11}, 3*\dfrac{2\pi}{11},...,10*\dfrac{2\pi}{11},\cancel{11*\dfrac{2\pi}{11}}\}$\\
+$\Rightarrow$ $z^1=r*e^{i\varphi}$\\
+$z^2=r^2*e^{2i\varphi}$\\
+$z^3=r^3*e^{3i\varphi}$\\
+\textbf{Allgemein gilt:}$z^n=r^n*e^{ni\varphi}$, gilt für alle $n\in\mathbb{N}$\\
+\end{document}

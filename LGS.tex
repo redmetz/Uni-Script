@@ -1,0 +1,33 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{graphicx}
+\title{Lineare Algebra - Galois-Field(2)}
+\author{Tobias Raaf}
+\begin{document}
+	\Large Lineare Gleichungssysteme über Körpern (LGS)\\\\
+	\normalsize\\
+	Es sei K ein Körper.\\
+	Form einer Linearen Gleichung mit n Unbekannten über K: $a_1*x_1*a_2*x_2*...*a_n*x_n=b$\\
+	Die Unbekannten sind dann: $x_1,x_2,...,x_n$\\
+	Die Koeffizienten: $a_1,a_2,...,a_n\in K$\\
+	Das Absolutglied: b $\in$ K\\
+	\textbf{Wichtig: Ein LGS heißt linear, da es keine Unbekanntenmultiplikation gibt!}\\
+	\\
+	Kurzform: $\sum_{j=1}^{n}a_{j}*x_{j}= b$\\
+	Konkreter ein LGS über K mit m Gleichungen und n Unbekannten:\\
+	$\sum_{j=1}^{n}a_{ij}*x_j=b_j$ (i=1,2,...,m)\\
+	Lösung: $(l_1,l_2,...,l_n)$ mit $l_1,l_2,...,l_n\in K$ heißt Lösung.\\
+	Dabei ist $(l_1,l_2,...,l_n)$ das Lösungstupel, mit der Voraussetzung, dass $\sum_{j=1}^{n}a_{ij}*l_j=b_i$ gilt.\\
+	Die Lösungsmenge $\mathbb{L}$ ist die Menge aller Lösungen.\\
+	\Large Arten von LGS\\\\
+	\normalsize\\
+	\textbf{(1) Das homogene LGS:} (0,0,0,...,0) ist \textbf{eine} geltende Lösung.\\
+	\textbf{(2)  inhomogene LGS:} (0,0,0,...,0) ist \textbf{keine} Lösung, d.h. es existiert ein $i\in{1,2,...,m}$ mit $b_\neq0$\\
+	
+	\end{document}

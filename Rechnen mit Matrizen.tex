@@ -1,0 +1,74 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{graphicx}
+\title{Lineare Algebra - Rechnen mit Matrizen}
+\author{Tobias Raaf}
+\begin{document}
+	\Large Rechnen mit Matrizen \\\\
+	\normalsize\\
+	\begin{enumerate}
+		\item Transponieren: Sei A=$(a_{ij})_{m\times n}\in K^{m \times n}$\\
+		Dann ist $A^T$:=$(b_{ij})_{m\times n}\in K^{n\times m}$ mit $b_{ij}=a_{ji}$\\
+		Beispiel: $A=\begin{pmatrix}
+			a & b & c\\
+			d & e & f\\
+		\end{pmatrix}$, $A^T=\begin{pmatrix}
+		a & d \\
+		b & e \\
+		c & f\\
+		\end{pmatrix}$\\
+		\item Skalarmultiplikation: Sei $k\in K$, k fest, $A \in K^{m\times n}$, $A=(a_{ij})_{m\times n}$.\\
+		Dann ist $k*A$:=$(k*a_{ij})_{m\times n}\in K^{m\times n}$\\
+		Beispiel: $\begin{pmatrix}
+		1 & 2\\
+		3 & 4\\
+		\end{pmatrix}, k=\pi \Rightarrow k*A=\begin{pmatrix}
+		\pi & 2\pi \\
+		3\pi & 4\pi \\
+		\end{pmatrix}$
+		\item Addition: Sei A,B$\in K^{m\times n}$, A=$(a_{ij})_{m\times n}$, B=$(b_{ij})_{m\times n}$\\
+		Dann ist A+B:=$(c_{ij})_{m\times n}\in K^{m\times n}$ mit $c_{ij}=a_{ij} + b_{ij}$\\
+		Beispiel: A=$\begin{pmatrix}
+	    1 & 2 & 3\\
+	    4 & 5 & 6\\
+	   	\end{pmatrix}$,B=$\begin{pmatrix}
+	   	1 & 2 & 3\\
+	   	4 & 5 & 6\\
+	   	\end{pmatrix}\Rightarrow$ A+B=C=$\begin{pmatrix}
+	   	2 & 4 & 6\\
+	   	8 & 10 & 12\\
+	   	\end{pmatrix}$\\
+	   	Bemerkung: A-B:= $A+(-1)*B$, mit $(-1)\in K$\\
+	   	\item Multiplikation: Sei $A\in K^{m\times n}$, $B\in K^{n\times p}$, A=$(a_{ij})_{m\times n}$, B=$(b_{ij})_{n\times p}$\\
+	   	Dann ist $A*B:=(c_{ij})_{m\times p}$ mit $c_{ij}=\sum_{k=1}^{n}a_{ik}*b_{kj}$\\
+	   	Beispiel: A=$\begin{pmatrix}
+	   	1 & 2 & 3\\
+	   	4 & 5 & 6\\
+	   	\end{pmatrix}_{2\times 3}$, B=$\begin{pmatrix}
+	   	a & d \\
+	   	b & e \\
+	   	c & f \\
+	   	\end{pmatrix}_{3\times 2}$\\
+	   	$(A*B)_{2\times 2}= \begin{pmatrix}
+	   	1a+2b+3c & 1d+2e+3f\\
+	   	4a+5b+6c & 4d+5e+6f\\
+	   	\end{pmatrix}$
+	   	
+	\end{enumerate}
+	\Large Matrixschreibweise für Lineare Gleichungssysteme\\\\
+	\normalsize\\
+	A=$(a_{ij})$ Koeffizientenmatrix\\
+	(A|b) Erweiterte Koeffizientenmatrix\\
+	$A*\begin{pmatrix}
+	x_1\\
+	...\\
+	x_n\\
+	\end{pmatrix}=b$\\
+	A*x=b\\
+\end{document}

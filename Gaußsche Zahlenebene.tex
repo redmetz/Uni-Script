@@ -1,0 +1,32 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Lineare Algebra - Gaußsche Zahlenebene}
+\author{Tobias Raaf}
+\begin{document}
+	\Large Die Gaußsche Zahlenebene \\\\\\
+	\normalsize
+\includegraphics{GaussEbene.png}\\\\\\
+Bemerkungen: z ist eindeutig durch (a,b) bestimmt.\\
+\hspace*{68pt} z ist eindeutig durch (r,$\varphi$) bestimmt.\\
+Anhand des Satzes des Pythagoras lässt sich aus der arithmetischen Form (a+bi), die trigonometrische Form berechnen:\\
+r=$\sqrt{a^2+b^2}$\\
+$\Rightarrow$ $\sin(\varphi)$=$\dfrac{b}{r}$, $\cos(\varphi)$=$\dfrac{a}{r}$, \\
+$\Rightarrow$ z = a+bi = $r\cos(\varphi)+r\sin(\varphi)i$ = $r(\cos(\varphi)+\sin(\varphi)i$)\\\Large
+\textbf{= $re^{i\varphi}$} $\Rightarrow$ Exponentielle/Eulersche Darstellung\\\normalsize
+Bemerkung: r=$\sqrt{a^2+b^2}$=|z| nennt man \textbf{Betrag} von z=a+bi\\
+\hspace*{56pt} $\varphi$ nennt man \textbf{Argument} von z=a+bi\\
+Bemerkung zum Argument: $\varphi$ mit 0$\leq$ $\varphi$ < $2\pi$ nennt man \textbf{Hauptargument}\\
+\\\\
+\textbf{Multiplikation/Division in Eulerscher Darstellung}:\\
+$z_1=r_1*e^{i\varphi_1},z_2=r_2*e^{i\varphi_2}$\\
+\textbf{Multiplikation}: $z_1*z_2$ = $r_1*e^{i\varphi_1}*r_2*e^{i\varphi_2}$=$(r_1*r_2)e^{i(\varphi_1*\varphi_2)}$
+\textbf{Division}= $z_2\neq0$\\
+$\dfrac{z_1}{z_2}=\dfrac{r_1*e^{i\varphi_1}}{r_2*e^{i\varphi_2}}= \dfrac{r_1}{r_2}*e^{i(\varphi_1-\varphi_2)}$ 
+
+\end{document}
