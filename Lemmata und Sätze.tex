@@ -1,0 +1,121 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Lemmata und Sätze}
+\author{Tobias Raaf}
+\begin{document}
+	\large \textbf{Lemmata und Sätze}
+\normalsize	\begin{enumerate}
+	\item Handschlaglemma: $\sum_{i=1}^{n}x_i=2y$
+	\item Proposition Binomialkoeffizienten: $\begin{pmatrix}
+	n\\k
+	\end{pmatrix}=\dfrac{n!}{k!(n-k)!}$\\
+	$\begin{pmatrix}
+	n+1\\k
+	\end{pmatrix}=\begin{pmatrix}
+		n\\k-1
+	\end{pmatrix}+\begin{pmatrix}
+	n\\k
+	\end{pmatrix}$
+	\item injektiv: $\forall a_1,a_2\in A$ mit $f(a_1)=f(a_2)$ gilt, dass $a_1=a_2 \Rightarrow$ injektiv
+	\item surjektiv: f[A]=B, $b\in B,$ $a\in A\Rightarrow f(a)=b$
+	\item bijektiv: Kombination aus surjektiv und injektiv
+	\item Satz von Cantor-Schröder-Bernstein: $f:A\rightarrow B$\\
+    $g: B\rightarrow A$ \\
+    Falls: f und g injektiv: Bijektion zwischen A und B\\
+    falls $g:B\mapsto A$ surjektiv: f injektiv
+    \item Satz von Cantor: |A|<|$\mathcal{P}(A)$|\\
+    Also: Potenzmenge der Menge A hat \textbf{immer} mehr Elemente als die Menge A selbst.
+    \item Permutationen: Es gibt n! Permutationen der Menge x=\{1,...,n\} mit $n\in \mathbb{N}$\\
+    Permutation ist eine Bijektion der Funktion $\pi(x\rightarrow x)$\\
+    Jede Permutation der Menge x ist Komposition der Transposition (1,2)(2,3)...(n-1,n)
+    \item Stirling'sche Formel: n!$\approx \sqrt{2\pi n}*(\dfrac{n}{e})^n$\\
+    Wenn $n\in \mathbb{N}$, f,g sind Funktionen $\mathbb{N} \rightarrow \mathbb{R}$\\
+    f$\thicksim$g, wenn $\epsilon$>0 existiert ein $n_0\in \mathbb{N}$, sodass $\forall n\in \mathbb{N}$ mit n>$n_0$ gibt, dass |f(n)/g(n)-1|<$\epsilon$
+    \item Definition: $M^+$:=M$\cup$\{M\}
+    \item Addition: +: $\mathbb{N}\times\mathbb{N}\rightarrow\mathbb{N}$\\
+    induktiv: n+0:=0\\
+    n$\cdot m^+:=n\cdot m+n$\\
+    \item Exponentation: $\mathbb{N}\times \mathbb{N}\rightarrow\mathbb{N}$\\
+    $n^0:=1$\\
+    $n^{m^{+}}:=n^m\cdot n$
+    \item Definition(Primzahlen): Eine Zahl p$\in \mathbb{N}$ ist prim p>1 und wenn sie nur durch 1 und sich selbst teilbar ist.\\
+    Primteiler einer Zahl n ist prim.
+    \item Primzahlsatz: $\pi (x)\approx \dfrac{x}{ln(x)}$
+    \item Fundamentalsatz der Arithmetik: $n=p_{1}^{\alpha_1}\cdot p_{2}^{\alpha_2}\cdot ...\cdot p_{k}^{\alpha_k}$\\
+    Jedes $n\in\mathbb{N}$ kann so dargestellt werden.\\
+    p...prim; n>0; $\alpha$>1\\
+    \item Euklidischer Algorithmus: a,b$\in \mathbb{Z}$, $b\neq 0$ existiert q,r$\in\mathbb{Z}$ mit a=q$\cdot$b+r, 0$\geq$r>|b|\\
+    a,b$\in \mathbb{N}$ mit b>0 ggT(a,b)=ggT(b,q mod b)\\
+    Algorithmus: Eingabe n,m$\in \mathbb{N}$ mit m$\geq$n\\
+    Ausgabe ggT(m,n)\\
+    \textbf{falls} m|n, dann m ausgeben\\
+    \textbf{sonst} Euklid: (n mod m,n) aus
+    \item Lemma von Bézout: wenn m,n$\in\mathbb{N}$, m und n \textbf{nicht beide} 0\\
+    $\exists a,b \in \mathbb{Z}$ mit ggT(n,m)=am+bn
+    \item Erweiterter euklidischer Algorithmus: Eingabe: $n,m \in \mathbb{N}$ mit $m\leq n$\\
+    Ausgabe: a,b$\in \mathbb{Z}$, sodass ggT(n,m)=am+bn\\
+    falls m|n, dann gebe (1,0) aus, sonst sei (b'a') die Ausgabe von erw. Euklid(n mod m,m) Gebe (a'-b'[n/m],b')
+    \item Lemma von Euklid: Teilt eine Primzahl das Produkt zweier natürlicher Zahlen, so auch mindestens einen der Faktoren.
+    \item \textbf{MODULO:} Add.: $a+_{mod~ n}b:=(a+b) mod~ n$\\
+    Sub.: $a-_{mod~ n}b:=(a-b) mod~ n$\\
+    Mult.: $a\cdot_{mod~ n}b:=(a\cdot b) mod~ n$\\
+    \item Homomorphieregel: \\
+    (a+b)mod n=(a mod n+b mod n)\\
+    (a-b)mod n=(a mod n-b mod n)\\
+    (a$\cdot$b)mod n=(a mod n$\cdot$b mod n)\\
+    a mod n=r a$\equiv$r (mod n)\\
+    Beispiel: 333333$\cdot$ 444444$\cdot$ 56789$\equiv$ 33$\cdot$44$\cdot$89\\
+    $\equiv$33$\cdot$11$\cdot$4$\cdot$89$\equiv$(330+33)$\cdot$(320+36) \\
+    $\equiv$ 63$\cdot$56 $\equiv$ 3528\\
+    $\equiv$ 28 (mod 100)
+    \item Al-Kaschi: binäre Exponentation: Man kann bei jedem Rechenschritt modular vereinfachen (Homomorphieregel)\\
+    Damit vermeidet man eine \textbf{EXPLOSION} der Zwischenergebnisse\\
+    $\Rightarrow$ Man kann mittels der Methode verdoppeln und quadrieren, die Berechnung in handhabbare Schritte zerlegen.\\
+    \item Chinesischer Restsatz: \\
+    - m$\cdot$n Felder (m-Höhe, n-Breite)\\
+    - Felder durch nummerieren (start in 0. Zeile und 0. Spalte)\\
+    - Standort zu Schritt x: k. Zeile und l. Spalte\\
+    folgende Fälle: -k<m-1 und l<n-1. dann fahren wir mit dem Feld in der k+1. Zeile \hspace*{75pt} und l+1. Spalte fort.\\
+    \hspace*{75pt}-k=m-1 und l<n-1. Fahre mit dem Feld in der 0. Zeile und l+1. \hspace*{75pt}Spalte fort\\
+    \hspace*{75pt}-k<m-1 und l=n-1. Fahre mit dem Feld in der k+1. Zeile und 0. \hspace*{75pt}Spalte fort.\\
+    \hspace*{75pt}- k=m-q und l=-1. Stopp
+    \item Satz: Es seien $n_1,...n_r\in \mathbb{N}$ teilerfremd und $a_1,...,a_r\in\mathbb{Z}$ dann gibt es genau eine natürliche Zahl $x\in\{0,...,n_1\cdot(...)\cdot n_r-1 \}$\\
+    Mit x$\equiv a_i(mod~n_i)$ für alle i$\in${1,...,r}
+    \item Definition Nullteiler: Man nennt a$\in \mathbb{Z}_n\backslash\{0\}$ einen Nullteiler, wenn es ein b$\in \mathbb{Z}_n\backslash\{0\}$ gibt mit a$\cdot b=0$
+    \item Definition Einheiten: Man nennt a$\in \mathbb{Z}_n$ eine Einheit, wenn es eine Zahl b mit a$\cdot$ b=1 gibt.
+    \item Lemma Jährling Syndrom: Sei n$\in \mathbb{Z}\backslash\{0\}$ dann sind äquivalent\\
+    1. m ist Einheit in $\mathbb{Z}_n$\\
+    2. m ist kein Nullteiler in $\mathbb{Z}_n$\\
+    3. m und n sind teilerfremd.
+    \item Proposition: Hat $n\in \mathbb{N}$ die Primfaktorzerlegung:
+    $n=p_{1}^{\alpha_1}\cdot p_{2}^{\alpha_2}\cdot ...\cdot p_{k}^{\alpha_k}$, dann gilt\\ $\phi$(n)=$(p_1-1)p_{1}^{\alpha_1-1}\cdot ... \cdot (p_k-1)p_{k}^{\alpha_k-1}$\\=$n(1-\dfrac{1}{p_1})\cdot ... \cdot(1-\dfrac{1}{p_k})$
+    \item Definition Gruppen: Eine Gruppe G heißt zyklisch falls sie von einem Element erzeugt wird, d.h. es gibt ein Gruppenmitglied g$\in$ G (den Erzeuger), sodass sich g schreiben lässt als G=\{$e,g,g^{-1},g\circ g,(g\circ g)^{-1},...$\}\\
+    =\{$g^m$|$m\in\mathbb{Z}$\}
+    \item Proposition: Die Anzahl der Erzeuger von ($\mathbb{Z}_n,+,-,0$) ist $\phi$(n).
+    \item Satz von Gauß: Sei p prim, dann ist in ($\mathbb{Z}_{p}^{*},\cdot, ^{-1}, 1$) zyklisch.
+    \item Proposition: Die Anzahl der Erzeuger von $\mathbb{Z}_{n}^{*}$ ist $\phi$($\phi$(n)).
+    \item Satz von Lagrange: Sei (G, $\circ$ $^{-1}$,e) eine Gruppe.\\
+    Eine Untergruppe von G ist eine Teilmenge u von G, die das neutrale Element e enthält und die unter $^{-1}$ und $\circ$ abgeschlossen ist.\\
+    Das soll heißen, dass mit jedem Element g$\in$U, g$^{-1}\in$U, und das für alle $g_1,g_2\in$U auch $g_1\circ g_2\in U$. Jede Untergruppe U ist ausgestattet mit den auf U eingeschränkten Operationen $\circ$,$^{-1}$ und dem selben neutralen Element e, selbst wieder eine Gruppe. Um anzuzeigen, dass U ein Untergruppe von G ist, schreibt an U$\leq$G
+    \item Definition Nebenklassen: Ist U eine Untergruppe der Gruppe G und g ein Element von G, dann nennt man g$\circ$U:=$\{g\circ u|u\in U\}$ eine (links-) Nebenklasse von U und G.
+	\item Es sei U eine Untergruppe von G und $g_1,g_2\in G$\\
+	Falls $g_1\in g_2\circ U$, dann gilt $g_1\circ U=g_2\circ U.$
+	\item Lemma Jährling-Pascal-Lukas: Je zwei Nebenklassen a$\circ$ U und b$\circ$ U sind entweder gleich oder disjunkt.
+	\item Definition Index: Es sei G eine Gruppe und U eine Untergruppe von G. Der Index von U in G ist die Anzahl der Nebenklassen von U und G und wird [G:U] geschrieben.
+	\item Satz von Lagrange: Ist U eine Untergruppe von einer endlichen Gruppe G, dann gilt [G:U]=|G|/|U|.
+	\item Lemma von Euler-Fermat: Ist p eine Primzahl, dann gilt für jede Zahl a$\in\mathbb{Z}$, die nicht durch p teilbar ist:\\
+	$a^{p-1}\equiv 1(mod~ p)$
+	\item Lemma Bob: Es seien $q_1,q_2$ teilerfremd. Dann gilt\\
+	a$\equiv b(mod~q_1)$ und a$\equiv b(mod~q_2)$, genau dann, wenn a$\equiv$b (mod $q_1,q_2$)
+	\item Definition Ansgar: Ein (schlichter, ungerichteter) Graph G ist ein Paar(V,E) bestehend aus einer Knotenmenge V und einer Kantenmenge E$\subseteq\binom{V}{2}$. Die Knotenmenge von G wird auch mit V(G), und die Kantenmenge E(G) bezeichnet.
+	\item Definition Isomorphie: 2 Graphen G und H sind isomorph, wenn es eine Bijektion f:V(G)$\rightarrow$V(H) gibt, sodass (u,v)$\in$E(G), genau dann, wenn (f(u),f(v)); intuitiv bedeutet das, dass man H aus G durch Umbenennen der Knoten von G erhält.
+	\item Definition Subgraph: Ein Graph H ist ein Subgraph von G, falls gilt V(H)$\subseteq$V(G) und E(H)$\subseteq$E(G). Ein induzierter Subgraph von G ist ein Graph H mit V(H)$\subseteq$V(G), und E(H)=E(G)$\cap\binom{V(H)}{2}$.
+    
+    
+\end{enumerate}
+	\end{document}
