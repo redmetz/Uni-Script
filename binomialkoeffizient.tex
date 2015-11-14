@@ -1,0 +1,76 @@
+\documentclass{scrartcl}\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{blindtext}
+\title{6. Binomialkoeffizienten}
+\author{Adrian Hille}
+\begin{document}
+\Large 6. Binomialkoeffizienten \\
+\\
+\normalsize
+$\binom{n}{k}$ (gesprochen: n \"uber k)\\
+die Anzahl der k-elementigen Teilmengen einer n-elementigen Menge.\\
+Bem.: \\
+$\binom{n}{0} =1$\\
+$\binom{n}{n}=1$\\ 
+...sind Extremf\"alle\\
+\\
+Schreiben n! f\"ur $1 \cdot 2 \cdot ... \cdot n$, definieren $0! := 1$\\
+\\
+\textbf{Proposition}\\
+F\"ur alle nat\"urlichen Zahlen n, k gilt: 
+$\binom{n}{k} = \frac{n!}{k!(n-k)!}$\\
+\\
+Insbesondere gilt:\\
+$\binom{n}{2} = \frac{n \cdot (n-1) }{2}$\\
+\\
+Wollen zeigen: $\binom{n}{k} = \frac{n!}{k!(n-k)!}$\\
+Bilden k-elementige Teilmenge einer n-elementigen Menge: w\"ahle erstes Element, dann ein zweites usw., bis zum k-ten Element.\\
+Daf\"ur gilt: $n \cdot (n-1) \cdot (...) \cdot (n-k+1) = \frac {n!}{(n-k!)}$ M\"oglichkeiten.\\
+Auswahlreihenfolge spielt keine Rolle:\\
+jeweils k! M\"oglichkeiten f\"uhren zur gleichen Teilmenge. $\square $\\
+\\
+Beobachtung: F\"ur alle nat\"urlichen Zahlen n,k gilt:\\
+$\binom{n}{k}={n}{n \cdot k}$\\
+(kombinatorischer Beweis:) Doppeltes Abz\"ahlen:\\
+  \begin{enumerate}
+    	\item Aus n Spielern einer Mannschaft mit k Spielern aufstellen.
+    	\item Aus n Spielern n-k Spieler ausw\"ahlen, die nicht spielen.
+    \end{enumerate}
+(algebraischer Beweis:)\\
+Folgt direkt aus $\binom{n}{k} = n \binom{n!}{k!(n-k)!} \qquad \square $\\
+\\
+Beobachtung: F\"ur alle nat\"urlichen Zahlen n,k gilt:\\
+$k \binom{n}{k} = n \binom{n-1}{k-1}$\\
+(kombinatorischer Beweis): Doppeltes Abz\"ahlen\\
+  \begin{enumerate}
+    	\item Aus n Spielern einer Mannschaft mit k Spielern inklusive Kapit\"an aufstellen.
+    	\item Aus n Spielern einen Kapit\"an ausw\"ahlen und dann aus den \"ubrigen k-1 Spieler ausw\"ahlen
+    \end{enumerate}
+(algebraischer Beweis):\\
+$k \binom{n}{k} = k \frac{n!}{k!(n-k)!} = \frac{n!}{(k-1)!(n-k)!} = n\frac{(n-1)!}{(k-1)!((n-1)-(k-1))!} = n \binom{n-1}{k-1} \qquad \square $ \\
+\\
+Beobachtung: F\"ur alle nat\"urlichen Zahlen n, k gilt: \\
+\[ \sum_{k=0}^n =\binom{n}{k} = 2^n \]\\
+Es gilt $2^n$ Teilmengen einer n-elementigen Menge.\\
+\\
+\textbf{Pascalsches Dreieck}\\
+\begin{tabular}{rccccccccc}
+$n=0$:&    &    &    &    &  1\\\noalign{\smallskip\smallskip}
+$n=1$:&    &    &    &  1 &    &  1\\\noalign{\smallskip\smallskip}
+$n=2$:&    &    &  1 &    &  2 &    &  1\\\noalign{\smallskip\smallskip}
+$n=3$:&    &  1 &    &  3 &    &  3 &    &  1\\\noalign{\smallskip\smallskip}
+$n=4$:&  1 &    &  4 &    &  6 &    &  4 &    &  1\\\noalign{\smallskip\smallskip}
+\end{tabular}
+\\
+F\"ur alle nat\"urlichen Zahlen n, k gilt: \\
+$\binom{n+1}{k}= \binom{n}{k-1}+\binom{n}{k}$\\
+\\
+Beweis: Sei M eine (n+1) elementige Menge und $x \in M $\\
+w\"ahlen x aus $\binom{n}{k-1}$ M\"oglichkeiten.\\
+w\"ahlen x nicht aus $\binom{n}{k}$ M\"oglichkeiten. \qquad $\square$\\
+\end{document}

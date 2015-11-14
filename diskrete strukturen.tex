@@ -6,164 +6,55 @@
 \usepackage{amssymb}
 \usepackage{stmaryrd}
 \usepackage{blindtext}
-\title{1- DIS- Die Symbole der Mengensprache}
+\title{�bersicht diskrete Strukturen}
 \author{Adrian Hille}
 \begin{document}
-\Large 1. Die Symbole der Mengensprache
-\\
-\\
-\normalsize
-Mengen: \\ 
-...jede Zusammenfassung M von bestimmten wohlunterschiedenen Objekten in unserer Anschauung oder des Denkens.\\
-\\
-Schreibweisen: 
-   \begin{itemize}
-    	\item e $\in$ M: e ist Element der Menge M.
-    	\item e $\notin$ M: e ist kein Element der Menge M.
-  	\item $\varnothing$: leere Menge.
-    	\item A $\subseteq$ B: A ist Teilmenge von B.
-    \end{itemize}
-
-\Large 2. Mengenangaben durch Aussonderung
-\\
-\\
-\normalsize
-$\{x \mid Bedingung (x) \}$:  Die Mengen aller x, die die gegebene Bedingung erf\"ullen.\\
-z.B.: alle geraden x
-$\{x \mid \exists y \quad y\cdot 2=x) \}$
-\\
-  \begin{itemize}
-    	\item $A \cap B$: Schnitt von A und B.
-    	\item $A \cup B$: Vereinigung von A und B.
-  	\item $A \setminus B$: Differenz von A und B.
-    \end{itemize}
-
-\Large 3. Mengenoperationen (Paar und Produkt)\\
-\\
-\normalsize
-\textbf{geordnete Paare (a,b)}\\
-(a,b) sind Menge der Gestalt $\{\{a\},\{a,b\}\}$\\
-\\
-$(a,b) \neq (b,a)$\\
-$\{a,b\}=\{b,a\}$\\
-$(a,b) = (c,d) \Rightarrow a=c und b=d$\\
-$\{\{a\},\{a,b\}\}=\{\{c\},\{c,d\}\}$\\
-\\
-\Large 4. Kodieren mit Mengen\\
-\\
-\normalsize
-\textbf{Produktmenge}\\
-$A \times B$ zweier Mengen A,B wird definiert durch:\\
-$A \times B\ := \{(a,b) \mid a \in A,b \in B\}$\\
-Schreiben $\vert A\vert$ f\"ur die Anzahl der Elemente der Menge A. \\
-\\
-\textbf{Relationen}\\
-Eine Teilmenge R von A und B hei\ss t (bin\"ar oder zweistellige) Relation.\\
-\\
-Falls A=B, so spricht man auch von einer zweistelligen Relation auf A.\\
-\\
-\textbf{Potenzmenge}\\
-Die Potenzmenge von A, geschrieben $\mathcal{P}(A)$, ist die Menge aller Teilmengen von A.\\
-Es gilt: $\vert \mathcal{P}(A) \vert = 2^{\vert A \vert}$\\
-\\
-\Large 5. Doppeltes Abz\"ahlen\\
-\\
-\normalsize
-Das doppelte Abz\"ahlen ist ein kombinatorisches Beweisprinzip.\\
-\\
-Z\"ahle auf zweierlei Weise die Kardinalit\"at z von:\\
-$\{(t_i , t_j) \mid t_i~gibt~ t_j~ die~ Hand\}$\\
-$x_i$: Anzahl der Personen denen $t_i$ die Hand reicht\\
-y: Anzahl aller Handschl\"age\\
-Es gilt: \[ \sum_{i=1}^n = x_i=z=2y \]\\
-und es folgt, dass eine gerade Anzahl der $x_i$ ungerade sein muss. $\square$ \\
-\\
-\Large 6. Binomialkoeffizienten \\
-\\
-\normalsize
-$\binom{n}{k}$ (gesprochen: n \"uber k)\\
-die Anzahl der k-elementigen Teilmengen einer n-elementigen Menge.\\
-Bem.: \\
-$\binom{n}{0} =1$\\
-$\binom{n}{n}=1$\\ 
-...sind Extremf\"alle\\
-\\
-Schreiben n! f\"ur $1 \cdot 2 \cdot ... \cdot n$, definieren $0! := 1$\\
-\\
-\textbf{Proposition}\\
-F\"ur alle nat\"urlichen Zahlen n, k gilt: 
-$\binom{n}{k} = \frac{n!}{k!(n-k)!}$\\
-\\
-Insbesondere gilt:\\
-$\binom{n}{2} = \frac{n \cdot (n-1) }{2}$\\
-\\
-Wollen zeigen: $\binom{n}{k} = \frac{n!}{k!(n-k)!}$\\
-Bilden k-elementige Teilmenge einer n-elementigen Menge: w\"ahle erstes Element, dann ein zweites usw., bis zum k-ten Element.\\
-Daf\"ur gilt: $n \cdot (n-1) \cdot (...) \cdot (n-k+1) = \frac {n!}{(n-k!)}$ M\"oglichkeiten.\\
-Auswahlreihenfolge spielt keine Rolle:\\
-jeweils k! M\"oglichkeiten f\"uhren zur gleichen Teilmenge. $\square $\\
-\\
-Beobachtung: F\"ur alle nat\"urlichen Zahlen n,k gilt:\\
-$\binom{n}{k}={n}{n \cdot k}$\\
-(kombinatorischer Beweis:) Doppeltes Abz\"ahlen:\\
-  \begin{enumerate}
-    	\item Aus n Spielern einer Mannschaft mit k Spielern aufstellen.
-    	\item Aus n Spielern n-k Spieler ausw\"ahlen, die nicht spielen.
-    \end{enumerate}
-(algebraischer Beweis:)\\
-Folgt direkt aus $\binom{n}{k} = n \binom{n!}{k!(n-k)!} \qquad \square $\\
-\\
-Beobachtung: F\"ur alle nat\"urlichen Zahlen n,k gilt:\\
-$k \binom{n}{k} = n \binom{n-1}{k-1}$\\
-(kombinatorischer Beweis): Doppeltes Abz\"ahlen\\
-  \begin{enumerate}
-    	\item Aus n Spielern einer Mannschaft mit k Spielern inklusive Kapit\"an aufstellen.
-    	\item Aus n Spielern einen Kapit\"an ausw\"ahlen und dann aus den \"ubrigen k-1 Spieler ausw\"ahlen
-    \end{enumerate}
-(algebraischer Beweis):\\
-$k \binom{n}{k} = k \frac{n!}{k!(n-k)!} = \frac{n!}{(k-1)!(n-k)!} = n\frac{(n-1)!}{(k-1)!((n-1)-(k-1))!} = n \binom{n-1}{k-1} \qquad \square $ \\
-\\
-Beobachtung: F\"ur alle nat\"urlichen Zahlen n, k gilt: \\
-\[ \sum_{k=0}^n =\binom{n}{k} = 2^n \]\\
-Es gilt $2^n$ Teilmengen einer n-elementigen Menge.\\
-\\
-\textbf{Pascalsches Dreieck}\\
-\begin{tabular}{rccccccccc}
-$n=0$:&    &    &    &    &  1\\\noalign{\smallskip\smallskip}
-$n=1$:&    &    &    &  1 &    &  1\\\noalign{\smallskip\smallskip}
-$n=2$:&    &    &  1 &    &  2 &    &  1\\\noalign{\smallskip\smallskip}
-$n=3$:&    &  1 &    &  3 &    &  3 &    &  1\\\noalign{\smallskip\smallskip}
-$n=4$:&  1 &    &  4 &    &  6 &    &  4 &    &  1\\\noalign{\smallskip\smallskip}
-\end{tabular}
-\\
-F\"ur alle nat\"urlichen Zahlen n, k gilt: \\
-$\binom{n+1}{k}= \binom{n}{k-1}+\binom{n}{k}$\\
-\\
-Beweis: Sei M eine (n+1) elementige Menge und $x \in M $\\
-w\"ahlen x aus $\binom{n}{k-1}$ M\"oglichkeiten.\\
-w\"ahlen x nicht aus $\binom{n}{k}$ M\"oglichkeiten. \qquad $\square$\\
-\\
-\Large 7 Die Russelsche Antinomie\\
-\\
-\normalsize
-allgemein: $\{x \mid Eigenschaften \}$\\
-betrachte: $R := \{ x \mid x \notin x\}$\\
-\\
-Gilt $ R \in R$\\
-   \begin{itemize}
-    	\item Falls ja: Dann muss R die Aussonderungsbedingung erf\"uellen. (Eigenschaft gilt nicht f\"ur R $\to$ R $\notin$ R $\lightning$
-	\item Falls nein: Eigenschaft erf\"ullt: R$\notin$ R $\to$ R $\in$ R $\lightning$\\
-    \end{itemize}
-\Large 8 Die Axiome von Zermelo-Fraenkel \\
-\\
-\normalsize
-       \begin{itemize}
-    	\item Extensionalit\"at: z.B.: $\{a,b\}=\{b, a, b\}$
-	\item Vereinigung: z.B.: $\{ \{a, b\} \{c , d, a\} \}$
-	\item unendliche Mengen: z.B.: $\{\{ \varnothing\}\{\{ \varnothing\}\}\{\{\{ \varnothing\}\}\}\}$
-	\item Fundierung: ($x \notin x$: zum selber knobeln)
-    \end{itemize}
-
-
-
-\end{document}  
+\large \textbf{Diskrete Strukturen}
+\normalsize		\begin{enumerate}
+			\item Die Symbole der Mengensprache
+			\item Mengenangaben durch Aussondern
+			\item Mengenoperationen
+			\item Kodieren mit Mengen
+			\item Doppeltes Abzählen
+			\item Binomialkoeffizienten
+			\item Die Russelsche Antinomie
+			\item Die Axiome von Zermelo-Fraenkel
+			\item Abbildungen
+			\item Notation
+			\item Der Satz von Cantor-Schröder-Bernstein
+			\item Das Auswahlaxiom
+			\item Die Kontinuumshypothese
+			\item Permutationen
+			\item Menge der natürlichen Zahlen
+			\item Die Wohlordnung der natürlichen Zahlen
+			\item Addition und Multiplikation 
+			\item Teilbarkeit und Primzahlen
+			\item Der euklidische Algorithmus
+			\item Modulare Arithmetik
+			\item Rechnen Modulo 2
+			\item Rechnen Modulo 5
+			\item Die Homomorphieregel
+			\item Uhrzeiten
+			\item Die letzten Ziffern
+			\item Potenzieren modulo n
+			\item Der chinesische Restsatz
+			\item Zufall in der Informatik (1)
+			\item Anwendung: Rechnen mit großen Zahlen
+			\item Gruppen
+			\item Beispiele für Gruppen
+			\item Die multiplikative Gruppe
+			\item Zyklische Gruppen
+			\item Öffentlich ein Geheimnis vereinbaren
+			\item Der Satz von Lagrange
+			\item Das Lemma von Euler-Fermat
+			\item Kryptographie mit öffentlichen Schlüsseln
+			\item Graphen
+			\item Knotenzusammenhang
+			\item Färbbarkeit
+			\item Bäume
+			\item Zweifacher Zusammenhang
+			\item Der Satz von Menger
+			\item Eulersche Graphen
+			\item Paarungen
+		\end{enumerate}
+\end{document}
