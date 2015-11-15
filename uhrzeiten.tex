@@ -1,0 +1,23 @@
+\documentclass{scrartcl}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\title{24. Uhrzeiten}
+\author{Adrian Hille}
+\begin{document}
+\Large 24. Uhrzeiten\\
+\\
+\normalsize
+Eine gr\"o \"ss ere Menge an Bauschotter wird mit einer Eisenbahn von A nach B transportiert, daf\"ur sind 50 Fahrten erforderlich. Das Beladen des Zuges dauert 4 Stunden, jede Fahrt 2 Stunden pro Richtung und das Abladen 3 Stunden. Pausen werden nicht gemacht. Mit dem Beladen f\"ur die erste Fahrt wurde mittags um 12 Uhr begonnen. Zu welcher Uhrzeit wird der letzte Zug wieder erwartet?\\
+\\
+Antwort: F\"ur jede Fahrt wird vom Beginn des Beladens bis zur R\"uckkehr ein Zeitraum von 11 Stunden ben\"otigt, insgesamt also 50 x 11 Stunden. Da nur nach der Uhreit der R\"uckkehr gefragt ist, kann modulo 24 gerechnet werden.\\
+$12+50 \cdot 11 \equiv 12+2 \cdot 11 \equiv 34 \equiv 10~(mod~24)$\\
+Man erh\"alt, dass der Zug zehn Stunden nach Mitternacht ankommt.
+\end{document}

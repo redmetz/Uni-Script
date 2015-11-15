@@ -1,0 +1,27 @@
+\documentclass{scrartcl}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\title{26. Potenzieren modulo n}
+\author{Adrian Hille}
+\begin{document}
+\Large 26. Potenzieren modulo n\\
+\\
+\normalsize
+Wollen ausrechnen: \\
+$2^{100000}~mod~100001$\\
+Schreiben als Summe von Zweierpotenzen:\\
+$100000 = 2^{2^{16}} + 2^{2^{15}}+ 2^{2^{10}} + 2^{2^{9}}+2^{2^{7}}+ 2^{2^5}$\\
+Bin\"arschreibweise:\\
+1100001101010000\\
+Geschickt klammern:\\
+$2^{10000} = 2^{2^{16}} \cdot 2^{2^{15}} \cdot 2^{2^{10}} \cdot 2^{2^{9}} \cdot 2^{2^{7}} \cdot 2^{2^5}$\\
+TRICK: Zwischenergebnis modulo 100001 (Homomorphieregel)\\
+\end{document}

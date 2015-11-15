@@ -1,0 +1,29 @@
+\documentclass{scrartcl}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\title{25. die letzten Ziffern}
+\author{Adrian Hille}
+\begin{document}
+\Large 25. die letzen Ziffern\\
+\\
+\normalsize
+$333333 \cdot 444444 \cdot 56789 = N$\\
+Frage: Was sind die letzten beiden Ziffern von N?\\
+L\"osung: Rechnen modulo 100!\\
+\\
+$N \equiv 33 \cdot 44 \cdot 89$ (mod n)\\
+$N \equiv 33 \cdot 11 \cdot 4 \cdot 89$ (mod n)\\
+$N \equiv (330+33)(320 \cdot 36)$ (mod n)\\
+$N \equiv 63 \cdot 56$ (mod n)\\
+$N \equiv 28$ (mod n)\\
+\\
+\end{document}

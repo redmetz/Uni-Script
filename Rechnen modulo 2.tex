@@ -1,0 +1,60 @@
+\documentclass{scrartcl}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\title{21. Rechnen modulo 2}
+\author{Adrian Hille}
+\begin{document}
+\Large 21. Rechnen modulo 2\\
+\\
+\normalsize
+\large allgemein: Rechnen modulo n\\
+\\
+\normalsize
+$\mathbb{Z}_n = \{0, 1, ..., n-1\}$ (Restklassen modulo n)\\
+F\"ur $a, b \in \mathbb{Z}_n$, definiere:\\
+\begin{itemize}
+	\item $a +_{mod~n} b := (a+b)~mod~n \in \mathbb{Z}_n$
+	\item	$a \cdot_{mod~n} b := (a\cdot b)~mod~n$
+	\item $a -_{mod~n} b := (a-b)~mod~n$
+\end{itemize}
+
+\large allgemein: Rechnen modulo 2\\
+\normalsize
+\begin{table}[H]
+\begin{tabular}{l|l|l}
+	$+_{mod~n} $ & 0 & 1\\
+	\hline
+	0 & 0 & 1\\
+	\hline
+	1 & 1 & 0\\
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\begin{tabular}{l|l|l}
+	$-_{mod~n} $ & 0 & 1\\
+	\hline
+	0 & 0 & 1\\
+	\hline
+	1 & 1 & 0\\
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\begin{tabular}{l|l|l}
+	$\cdot_{mod~n} $ & 0 & 1\\
+	\hline
+	0 & 0 & 0\\
+	\hline
+	1 & 0 & 1\\
+\end{tabular}
+\end{table}
+
+\end{document}

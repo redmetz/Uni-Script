@@ -1,0 +1,79 @@
+\documentclass{scrartcl}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\title{32. die multiplikative Gruppe}
+\author{Adrian Hille}
+\begin{document}
+\Large 32. Die multiplikative Gruppe\\
+\\
+\normalsize
+Schreibweise:\\
+$g \in G, n \in \mathbb{N}$\\
+$g^n= g \circ ... \circ g$ (n-mal)\\
+$g^{\circ}=e$ (neutrales Element)\\
+$g^{n+1} := g^n \circ g$\\
+$n \in \mathbb{Z}: g^n :=(g^{-n})^{-1} \quad (n <0)$\\
+$\mathbb{Z}_6 \to 2$ hat kein Inverses\\
+\\
+Definition: Eine Zahl $a \in \mathbb{Z}_n \ \{0\}$ hei\ss t Nullteiler, wenn es ein $b \in \mathbb{Z}_n \ \{0\}$ gibt, sodass $a \cdot b = 0 (mod~n)$.\\
+\\ 
+Beispiel: 2 ist Nullteiler von $\mathbb{Z}_6$.\\
+\\
+Definition: Eine Zahl $a \in \mathbb{Z}_n$ hei\ss t Einheit, wenn es eine Zahl $b \in \mathbb{Z}_n$ gibt mit $a \cdot b \equiv 1 (mod~n)$.\\
+\\
+Lemma: Eine Zahl $m \in \mathbb{Z}_n \ \{0\}$ ist Einheit genau dann, wenn m und n teilerfremd.\\
+Beweis: ($\Rightarrow$) Es gibt ein $b \in \mathbb{Z}_n$ mit $m \cdot b \equiv 1~mod~n$\\
+$m \cdot b -1 = a \cdot n$ f\"ur alle $a \in \mathbb{Z}$\\
+$1 = mb-an$\\
+$\Rightarrow ggt(m,n)=1$\\
+($\Leftarrow$) Seien m und n teilerfremd.\\
+B\'{e}zout: $a \cdot m + b \cdot n = 1 \qquad (a,b \in \mathbb{Z} )$\\
+Behauptung: a ist multiplikatives Inverses zu m\\
+$m \cdot a = 1-bn$\\
+$\equiv 1~mod~n \qquad \square$\\
+Die Menge aller Einheiten bildet bzgl. der Multiplikation eine Gruppe $\mathbb{Z}_n^* (in~\mathbb{Z}_n)$\\
+\begin{enumerate}
+	\item Assoziativgesetz vererbt sich
+	\item neutrales Element
+	\item inverses Element: zu a gibt es b (Inverses) mit $a \cdot b \equiv 1~mod~n$
+	\item $G^2 \mapsto G$
+	\item a,b Einheiten zz.: $a \cdot b$ Einheit. Es gibt $a^{-1}, b^{-1}$ mit $aa^{-1} = 1 = bb^{-1}$ 
+\end{enumerate}
+Inverse: $(a \cdot b) \cdot (b^{-1} \cdot a^{-1}= \frac{a \cdot (bb^{-1}}a^{-1}{1}$\\
+$= a a^{-1}$\\
+$= 1$\\
+\\
+Inverses: $(a \cdot b)^{-1} := b^{-1}a^{-1}$\\
+\\
+\Large Eulersche $\Phi$-Funktion\\
+\normalsize
+Wie gro\ss $~$ ist die multiplikative Gruppe $\mathbb{Z}_n^*$ von $\mathbb{Z}$?\\
+\begin{table}[H]
+\begin{tabular}{l|l|l|l|l|l}
+	n & 2 & 3 & 4 & 5 & 6 \\
+	\hline
+	$\Phi (n)$ & 1 & 2 & 2 & 4 & 2\\
+\end{tabular}
+\end{table}
+$=\vert \mathbb{Z}_n^* \vert$
+\\
+Hat $n \in \mathbb{N}$ die Primfaktorzerlegung $n = p_1^{\alpha_1} \cdot (...) \cdot p_n^{\alpha_n} $\\
+dann gilt: $\Phi (n) = (p_1-1)p_1^{\alpha_1-1} \cdot (...) \cdot (p_{n-1})p_n^{\alpha_n-1}$\\
+\\
+Beispiel:
+$n = 6 = 2 (=p_1) \cdot 3(=p_2) $\\
+$\Phi (6)=(2-1) \cdot 2^0 \cdot (3-1) \cdot 3^0 = 1 \cdot 2 \cdot 1 = 2$\\
+\\
+F\"ur kleine n einfache Formel. F\"ur gro\ss e n Problem, da Primfaktorzerlegung (noch) nicht berechenbar.\\
+
+
+\end{document}

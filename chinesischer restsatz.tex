@@ -1,0 +1,28 @@
+\documentclass{scrartcl}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\title{27. chinesischer Restsatzl}
+\author{Adrian Hille}
+\begin{document}
+\Large 27. chinesischer Restsatz\\
+\\
+\normalsize
+Satz: Es seien m, n teilerfremd und $k, l \in \mathbb{N}$. \\
+Dann gilt es genau eine Zahl $x \in \{0, ..., mn-1 \}$ mit\\
+$1 \equiv k~mod~m$\\
+$1 \equiv l~mod~b$\\
+\\
+Beweis: Nach B\'ezout gibt es $a, b \in \mathbb{Z}$ dass $a \cdot m + b \cdot n = 1$.\\
+Behauptung: $x := l \cdot a \cdot m + k \cdot b \cdot n$\\
+leistet die gew\"unschte:\\
+$lam+kbn \equiv (q-am)k \equiv k~mod~m$\\
+$lam+kbn \equiv lam \equiv (1 - bn)l \equiv l~mod~n$\\
+\end{document}

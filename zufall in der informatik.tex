@@ -1,0 +1,22 @@
+\documentclass{scrartcl}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\title{28. Zufall in der Informatik}
+\author{Adrian Hille}
+\begin{document}
+\Large 28. Zufall in der Informatik\\
+\\
+\normalsize
+(bzgl. fehlender Aufzeichnungen orginal aus Bodirksy-Skript \"ubernommen)\\\\
+Eine der wichtigsten Klassen von Problemen in der theoretischen Informatik ist die Klasse der Probleme, die ein Computer in polynomieller Zeit lo?sen kann. Polynomiell bedeutet hier: polynomiell in der Gr\"o\ss e der Eingabe. Wenn n die Eingabegr\"o\ss e bezeichnet, dann ist also ein Algorithmus, der stets mit n5 + 1000 Rechenschritten auskommt, polynomiell, aber ein Algorithmus, der manchmal 2n Rechenschritte ben\"otigt, nicht. Die Klasse von Problemen mit einem polynomiellen Algorithmus wird mit P bezeichnet. Eine formale Definition dieser Klasse werden Sie in den einschl\"agigen Informatikvorlesungen kennenlernen.\\
+In der Praxis ist man aber auch oft mit einem Algorithmus zufrieden, der Zufalls- bits verwenden darf, und dessen Laufzeit im Erwartungsfall polynomiell ist. Die Klasse aller Probleme, die von einem solchen Algorithmus gel\"ost werden k\"onnen, nennt man ZPP (Zero-Error Probabilistic Polynomial Time). Interessanterweise kennt man kein Problem in ZPP, von dem man nicht auch w\"usste, dass es in P liegt. Lange Zeit hatte das bereits in Abschnitt 3.3 erw\"ahnte Primalit\"atsproblem diesen Status: man kennt einen randomisierten Algorithmus mit erwartet polynomieller Laufzeit, aber man wusste nicht, ob das Problem in P ist. Aber wie wir bereits verraten haben, weiss man mittlerweile (seit 2002), dass es auch einen polynomiellen deterministischen (d.h., nicht randomisierten) Algorithmus fu?r den Test auf Primalit\"at gibt.\\
+Eine andere interessante Art von randomisierten Algorithmen ist die folgende. Anstatt zu fordern, dass die Laufzeit des Algorithmus im Erwartungsfall polynomial ist22, fordert man, dass der Algorithmus immer polynomial ist, aber nur mit gro\ss er Wahrscheinlichkeit das richtige Ergebnis liefern muss23. Ein Problem, von dem man einen solchen Algorithmus kennt, von dem man aber nicht weiss, ob es in P liegt, wird im n\"achsten Abschnitt eingef\"uhrt.\\
+\end{document}
