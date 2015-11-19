@@ -1,0 +1,87 @@
+\documentclass{scrartcl}
+\newtheorem{defi}{Definition}
+\newtheorem{satz}{Satz}
+\newtheorem{bsp}{Beispiel}
+\newtheorem{lem}{Lemma}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\section{Die Menge der nat\"urlichen Zahlen}
+F\"ur eine Menge M definiere $M^+=M\cup\{M\}.$\\
+
+\subsection{Die Wohlordnung der natürlichen Zahlen}
+Für $n,m \in \mathbb{N}$ gilt $n < m$ genau dann, wenn $n \in m$. Wir schreiben $n \leq m$ falls $n < m$ oder $n = m$ gilt. Die Relation $\leq$ ist eine \emph{Wohlordnung:} Für jede Teilmenge $T$ von $\mathbb{N}$ existiert ein \emph{kleinstes Element}. Das heißt für jedes $T \subseteq \mathbb{N}$ gibt es ein Element $x \in T$, so dass es kein $y\in T$ gibt mit $y < x$. Wir bemerken, dass < und $\leq$ binäre Relation auf $\mathbb{N}$ sind, weshalb wir $\leq$ als die Teilmenge von $\mathbb{N} \times \mathbb{N}$ betrachten, die alle geordneten Paare $(m,n)$ enthält mit $n \leq m$. 
+\\
+\subsection{Addition und Multiplikation}
+Die Addition ist eine Funktion $+:=\mathbb{N} \times \mathbb{N} \to \mathbb{N} $(= eine ``zweistellige'' Funktion auf $\mathbb{N}$) und wird wiefolgt induktiv definiert:
+\begin{center}
+	$n+0:=n$
+	\\
+	$n+m^+:=(n+m)^+$
+\end{center}
+Auch die Multiplikation $\cdot:\mathbb{N} \times \mathbb{N} \to \mathbb{N}$ kann mein induktiv definieren:
+\begin{center}
+	$n\cdot 0 := 0$
+	\\
+	$n\cdot m^+ :=n\cdot m+n$
+\end{center}
+Und zum Schluss betrachten wir noch die Exponentation $\mathbb{N} \times \mathbb{N} \to \mathbb{N}$ mit Hilfe der Multiplikation:
+\begin{center}
+	$n^0:=1$
+	\\
+	$n^{m^{+}}:=n^mn$
+\end{center}
+\subsection{Teilbarkeit und Primzahlen}
+Wir definieren auf $\mathbb{N}$ die \emph{Teilbarkeitsrelation:} für $a,b \in \mathbb{N}$ gelte $a\mid b$(sprich a \emph{teilt} b) genau dann, wenn es ein $k \in \mathbb{N}$ gibt mit $a \cdot k = b$. In diesem Fall heißt \emph{a Teiler} von $b$. 
+\begin{defi}Eine Zahl $p\in \mathbb{N}$ heißt Primzahl(oder prim), wenn sie größer als 1 ist und nur durch 1 und sich selbst teilbar ist. Ein Primteiler von n ist ein Teiler von n, der prim ist. 
+\end{defi}
+\begin{satz}(Fundamentalsatz der Arithmetik). Jede natürliche Zahl n > 0 kann auf genau eine Weise als Produkt 
+\begin{center}$n=p_{1}^{\alpha_{1}} \cdot p_{2}^{\alpha_{2}} \cdot ... \cdot p_{k}^{\alpha_{k}}$\end{center}
+geschrieben werden, wobei $k \in \mathbb{N}, p_1 < p_2 < ... < p_k$ Primzahlen, und 
+$\alpha_1, \alpha_2, ..., \alpha_k \in \mathbb{N}$ größer als 1 sind. 
+\end{satz}
+\subsection{Der euklidische Algorithmus}
+Der euklidische Algorithmus ist ein effizientes Verfahren, um den größten gemeinsamen Teiler zweier Zahlen zu berechen. \\
+Der \emph{größte gemeinsame Teiler} von $a,b \in \mathbb{N}$ ist die größte natürliche Zahl $d$, die $a$ und $b$ teilt. Wir schreiben $ggT(a,b)$ für diese Zahl $d$. 
+\begin{lem}(Division mit Rest). Seien $a,b \in \mathbb{Z}$ und $b!=0$. Dann gibt es $q,r \in \mathbb{Z}$ mit $a=qb+r$ und $0\leq r < |b|$.
+\end{lem}
+Für die Zahl r aus dem Lemma schreiben wir auch $a mod b$; was wir schon unter dem \emph{Rest} aus der schriftlichen Division her kennen. Für $q \in \mathbb{Q}$ schreiben wir $\left\rfloor{q}\right\rfloor$ für die eindeutige größte Zahl $z \in \mathbb{Z}$ die kleiner ist als $q$. Dann gilt für $a,b \in \mathbb{N}$ und $b!=0$ dass $a=\left\rfloor{a\setminus b}\right\rfloor + a mod b.$
+
+\begin{lem}
+Es seien $a,b \in \mathbb{N}$ mit $b > 0$. Dann gilt $ggT(a,b)=ggT(b, a mod b)$.
+\end{lem}
+Dieses Lemma ist die zentrale Beobachtung für die Korrektheit für den euklidischen Algorithmus:
+\\
+//Eingabe: $m,n \in \mathbb{N}$ mit $m\leq n$\\
+//Ausgabe: $ggT(m,n)$. \\
+Falls $m\mid n$\\
+\hspace{4pt}gebe $m$ aus\\
+ansonsten\\
+\hspace{4pt}gebe $EUKLID(n\mod{m},m)$ aus.
+\subsection{Erweiterter euklidischer Algorithmus}
+Durch eine kleiner Erweiterung kann der euklidische Algorithmus auch dazu verwendet werden, um für gegeben $m,n \in \mathbb{N}$ die Zahlen $a,b \in \mathbb{Z}$ aus dem Lemma von Bézout zu berechnen. 
+\begin{lem}
+Es seien $m,n \in \mathbb{N}$ nicht beide 0. Dann gibt es ganze Zahlen $a,b \in \mathbb{Z}$ mit $ggT(m,n)=am+bn$.
+\end{lem}
+Erweiterter Algorithmus:\\
+//Der erweiterte euklidische Algorithmus E-EUKLID$(m,n)$\\
+//Eingabe: $m,n \in \mathbb{N}$ mit $m\leq n$.\\
+//Ausgabe: $a,b \in \mathbb{Z}$ so dass $ggT(m,n)=am+bn$\\
+Falls $m\mid n$\\
+\hspace{4pt}gebe $(1,0)$ aus.\\
+ansonsten\\
+\hspace{4pt}Sei $(b',a')$ die Ausgabe von E-EUKLID$(n\mod{m},m)$.\\
+\hspace{4pt}Gebe $(a'-b'\left\rfloor{n\setminus m}\right\rfloor, b')$ aus.\\
+
+\begin{lem}(Lemma von Euklid). Teilt eine Primzahl das Produkt zweier natürlicher Zahlen, so auch mindestens einen der Faktoren.
+\end{lem}
+
+\end{document}
