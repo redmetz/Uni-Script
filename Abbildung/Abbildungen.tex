@@ -1,0 +1,70 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+
+\section{Abbildungen}
+Seien A und B zwei Mengen. Eine \emph{Abbildung}(oder \emph{Funktion}) von A nach B weist jedem Element von A genau ein Element aus B zu. Formal ist die Funktion f von A nach B ein Paar ($G_f,B$), wobei $G_f \subseteq A \times B$ eine Relation ist, die folgende Eigenschaft erfüllt: zu jedem $a \in A$ gibt es genau ein $b \in B$ so dass $(a,b) \in G_f$. Die Relation $G_f$ wird auch Graph von $f$ genannt.
+\\
+\subsection{Notation}
+Wenn \emph{f} eine Funktion von \emph{A} nach \emph{B} ist, so schreibt man auch $f:A \to B$ und nennt \emph{A} den \emph{Definitionsbereich} und \emph{B} den \emph{Zielbereich} der Funktion. Statt $(a,b) \in G_f$ schreibt man meist $f(a)=b$ und spricht, \emph{b} sei der \emph{Bild von a unter f}.
+\\
+Eine Funktion \emph{f} heißt
+\begin{description}
+	\item \emph{f ist injektiv} falls für alle $a_1,a_2 \in A mit f(a_1)=f(a_2) gilt,so dass a_1=a_2$. Keine zwei verschiedenen Elemente von A haben das gleiche Bild unter \emph{f}. Zur Berechnung definiert man die Umkehrfunktion $f^-1$
+	\item \emph{surjektiv} falls $f[A] = B$. D.h. für jedes $b \in B gibt es ein a \in A $mit $f(a)=b$.
+	\item \emph{Bijektiv}, falls sie sowohl injektiv, als auch surjektiv ist. 
+\end{description}
+\subsection{Der Satz von Cantor-Schr\"oder-Bernstein}
+Seien $f: A \to B und g: B \to A$ Injektion. Dann exisitiert auch eine Bijektion zwischen A und B. 
+\\
+\subsection{Das Auswahlaxiom}
+Falls $f: A\to B$ eine Injektion ist, dann gibt es sicherlich eine Surjektion von $f[A]$ nach $A$, n'mlich die bereits eingeführte Umkehrabbildung $f^-1$ von $f$. Diese Umkehrbildung können wir beliebig auf Elemente aus $B\setminus[A]$ fortsetyen. Eine Fortsetyung erhalten wir dann beispielsweise, indem wir alle Elemente aus $B\setminus f[A]$ auf dasselbe Element aus $A$ abbilden. \\
+
+Falls $g: A \to B$ eine Surjektion ist, so gibt es auch eine Injektion $f: B \to A$ mit $g \circ f = id_B$.
+\\
+\subsection{Die Kontinuumshypothese}
+Für alle Mengen A gilt $|A| < |\mathcal{P}(A)|$, d.h. die Potenzmenge einer belibigen Menge hat stets strikt mehr Elemente. 
+\\
+\subsection{Permutationen}
+Eine Permutation einer Menge X ist eine Bijektion $ \pi:X \to X $. Eine Permutation $\pi$ wird oft in der folgenden Form angegeben:
+\begin{center}
+	$\left( \begin{array}{ccccc}
+	1 & 2 & 3 & ... & n \\
+	\pi(1) & \pi(2) & \pi(3) & ... & \pi(n)
+	\end{array} \right)$
+\end{center}
+Permutationen können jedoch auch in einer kompakteren Form aufgeschrieben werden: ($\begin{array}{ccccc}x_1 & x_2 & x_3 & ... & x_n\end{array}$). 
+In der Notation kommt es \emph{nicht} darauf an:
+\begin{itemize}
+	\item in welcher Reihenfolge die Zyklen notiert werden
+	\item mit welchem Elemnt wir den Zyklus beginnen
+\end{itemize}
+Die Komposition(hintereinader Ausführung) zweier Permutationen ist wieder eine Permutation von X. Beispiel(von rechts nach links!):\\
+\begin{center}
+	$\left( \begin{array}{cccc}
+	1 & 2 & 3 & 4 \\
+	2 & 3 & 1 & 4 
+	\end{array} \right) \circ
+	\left( \begin{array}{cccc}
+	1 & 2 & 3 & 4 \\
+	2 & 3 & 1 & 4 
+	\end{array} \right) \circ
+	\left( \begin{array}{cccc}
+	1 & 2 & 3 & 4 \\
+	2 & 3 & 1 & 4 
+	\end{array} \right) =
+	\left( \begin{array}{cccc}
+	1 & 2 & 3 & 4 \\
+	1 & 2 & 3 & 4 
+	\end{array} \right)$
+\end{center}
+Doch wieviele Permutationen mit n Elementen gibt es? Genau $n!$ viele. Bei sehr großen $n$ kann man auch die \emph{Stirling'sche Formel} benutzen: $n!=\sqrt{2\pi n}(\frac{n}{e})^n$
+
+\end{document}
