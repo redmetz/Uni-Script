@@ -1,0 +1,37 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Graphen}
+\author{Tobias Raaf}
+\begin{document}
+	\large \textbf{Graphen}\\\\
+	\normalsize\\ G=(V,E)\\
+	V:Menge der Knoten des Graphen G\\
+	E:Menge der Kanten des Graphen G, E$\subseteq\binom{V}{2}$\\
+	$\binom{V}{2}$: Menge aller 2-elementigen Teilmengen der Knotenmenge V.\\
+	$|\binom{V}{2}|=\binom{|V|}{2}$\\
+	$K_n$: Clique mit n Elementen, Clique: Graph mit E=$\binom{V}{2}$\\\\
+	$I_n$: Unabhängige Menge (Stabile Menge): Eine Menge mit E=$\varnothing$\\\\
+	Sei G ein Graph, dann schreibt man $\bar{G}$ für das Komplement von G. Das heißt jede existierende Kante in G hat in $\bar{G}$ keinen Bestand, aber für jede kantenlose Knotenkombination in G wird in $\bar{G}$ eine Kante erzeugt. Formal heißt das: $\bar{G}$=(V,$\binom{V}{2}$$\backslash$ E)\\\\
+	$C_n$= Zyklischer Graph, Kreisstruktur erkennbar durch die Verteilung der Kanten, jeder Knoten ist Teil genau zweier Kanten mit "Nachbarknoten". \\Formal: ($\mathbb{Z}_n,{(x,y)|x=y+1~ mod ~n}$)\\\\
+	G=(V,E) Graph\\
+	\\
+	induzierter Subgraph: S(V',E'), mit V'$\subseteq$V, E'=E$\cap\binom{V'}{2}$\\
+	(schwacher) Subgraph: S(V',E'), mit V'$\subseteq$V, E'$\subseteq$E$\cap\binom{V'}{2}$\\ \\
+	Definition Streckenzug: Ein Streckenzug ist eine Folge von Knoten in G, sodass zwischen 2 aufeinanderfolgenden Knoten immer eine Kante ist.
+	Beispiel:$u_1,u_2,...,u_l, \{u_i,u_{i+1},\}$$\in$ E für alle i von 1 bis (l-1)\\\\
+	Definition Weg: Ein Weg ist ein Streckenzug ohne doppelt vorkommende Knoten.\\\\
+	Definition zusammenhängend: Ein Graph heißt zusammenhängend, falls für alle u,v$\in$ V(G) ein Weg $u=u_0,...,u_n=v$ existiert. Also: Alle Knoten in irgendeiner Form (über andere Knoten) miteinander verbunden sind.\\\\
+	Definition: Seien G,H zwei Graphen mit V(G)$\cap$V(H)$\neq\varnothing$\\
+	Definiere G$\uplus$H als (V(G)$\cup$V(H), E(G)$\cup$E(H))\\\\
+	Lemma: Ein Graph G ist zusammenhängend, genau dann, wenn er sich nicht schreiben lässt als $H_1\uplus H_2$ mit $V(H_1)\neq \varnothing$ und $V(H_2)\neq \varnothing$\\\\
+	Sei G ein Graph\\
+	Dann heißt k$\subseteq$V(G) Zusammenhangskomponente, falls (k,E(G)$\cap$$\binom{k}{2}$) zusammenhängend und k größtmöglich gewählt ist.(Jede weitere Maximierung der Knotenmenge k, also den gebildeten Graphen unzusammenhängend machen würde) Dabei ist (k,E(G)$\cap$$\binom{k}{2}$) ein induzierter Subgraph von G.\\\\
+	Seien $H_1,...H_l$ die von den Zusammenhangskomponenten induzierten Subgraphen von G.\\
+	Dann lässt sich G schreiben als:\\
+	$H_1\uplus H_2\uplus H_3\uplus...\uplus H_l$
+\end{document}

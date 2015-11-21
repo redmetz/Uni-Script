@@ -1,0 +1,27 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Der Kleine Fermat und Satz von Euler-Fermat}
+\author{Tobias Raaf}
+\begin{document}
+	\large \textbf{Der kleine Fermat}\\\\
+	\normalsize\\ Sei p prim und sei $a\in \mathbb{Z}$, sodass p kein Teiler von a ist, dann:\\
+	$a^{p-1}\equiv 1 (mod~p)$\\\\
+	\textbf{Beweis:} $|\mathbb{Z}_{p}^{*}|=p-1$\\
+	b:=(a mod p)$\in |\mathbb{Z}_{p}^{*}|$\\
+	$b^{|\mathbb{Z}_{p}^{*}|}$=1\\
+	$a^{p-1}\equiv 1(mod~p)$\\
+	\\\large \textbf{Der Satz von Euler-Fermat}\\\\
+	\normalsize\\Der kleine Fermat nur ohne die Bedingung, dass $|\mathbb{Z}_{p}^{*}|$, mit p prim.\\ 
+	\textbf{Satz:} Sei nun b beliebig und ggT(a,n)=1\\
+	Dann: $a^{\phi(n)}\equiv 1 (mod~n)$\\
+	$|\mathbb{Z}_{n}^{*}|=\phi(n)$\\
+	b:= (a mod n)$\in$$|\mathbb{Z}_{n}^{*}|$\\
+	$b^{\phi(n)}= 1$\\
+	$a^{\phi(n)}\equiv 1(mod~n)$\\
+	Der  Satz findet Anwendung innerhalb des Verschlüsselungsverfahren RSA.
+\end{document}

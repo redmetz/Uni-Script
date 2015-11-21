@@ -1,0 +1,29 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{RSA}
+\author{Tobias Raaf}
+\begin{document}
+	\large \textbf{RSA}\\\\
+	\normalsize\\ \begin{enumerate}
+		\item Schlüssel anlegen\\
+		Bob wählt zwei große Primzahlen p und q.\\
+		Berechnet n:=p$\cdot$q\\
+		Wähle eine von $\phi(n)$ teilerfremde Zahl d.($\phi(n)=(p-1)\cdot(q-1))$\\
+		$\Rightarrow$ Es gibt ein Inverses i von d in $|\mathbb{Z}_{n}^{*}|$\\
+		$d\cdot i\equiv 1 (mod~\phi(n))$\\
+		Anmerkung: i kann mit dem erweiterten euklidischen Algorithmus  errechnet werden.\\
+		n,i werden öffentlich bekannt gegeben.\\
+		\item Alice: $m\in \\mathbb{Z}_n$ Nachricht\\
+		c:=$m^{i}~mod~n$ (Al Kaschi)\\
+		c wird an Bob geschickt.\\
+		\item Entschlüsseln: Bob berechnet $c^{d}~mod~n$\\
+		Behauptung: $m\equiv c^d$ (mod n)\\
+		$c^d=(m^{i})^{d}=m^{i\cdot d}\equiv m^{1+n\cdot \phi(n)}$ mod n\\
+		$id\equiv 1~mod ~ \phi(n)$,  $m^{\phi(n)}\equiv 1$ (mod n)\\
+	\end{enumerate}
+\end{document}

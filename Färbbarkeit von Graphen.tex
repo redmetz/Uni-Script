@@ -1,0 +1,76 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Diskrete Strukturen}
+\author{Tobias Raaf}
+\begin{document}
+	\large \textbf{Diskrete Strukturen 11.11.2015 Vertretung:Baumann}\\\\
+	\normalsize\\ Graph: Algebraische Struktur| $\neq$ Graphendiagramm, aber man kann aus ihm das Graphendiagramm konstruieren. z.B. \\$G_1$=(\{1,2,3,4\},$\binom{V}{2})$\\
+	$G_2=\{(1,2,3,4),\{\{1,2\}\{1,3\}\{2,3\}\}$\\\\
+	Beschriftetes Graphendiagramm: Veranschaulichung eines Graphen. Siehe Tafelbild zu $G_1,G_2$.\\\\
+	Unbeschriftete Graphendiagramm stellen eine Isomorphieklasse von Graphen dar.\\\\
+	\textbf{Isomorphie:} $G_1, G_2, G_3$ haben alle 7 Knoten, alle Knoten haben den Grad 4.\\ Siehe Tafelbild.\\
+	Frage: $G_1\cong G_2?$ Gelesen: Ist der Graph $G_1$ \textbf{isomorph zu} dem Graphen $G_2$\\
+	Ja, da man durch Umbenennung der Knoten den gleichen Graphen erhält.\\
+	Einer der unbeschrifteten Graphendiagramme von $G_1~oder~G_2$ beschreibt die Isomorphieklasse.\\
+	Frage: $G_1\cong G_3?$ NEIN, Knotenanzahl, Kantenanzahl und Grad der Knoten zwar gleich, aber: Wenn man den Graphen G-0 bildet (G-0:=\{0,...,6\}$\backslash$\{0\},E$\backslash$\{\{0,6\}\{0,1\}\{0,2\}\{0,5\}\}\\
+	Zeichnet man $G_1-0$, dann gibt es zwei miteinander verbundene Knoten mit Grad 4. Bei $G_3-0$ bleiben ebenfalls 2 Knoten mit Grad 4, aber diese sind nicht über eine Kante verbunden!\\
+	\\
+	\textbf{Isomorphieproblem für  Graphen:} Geg: $G_1,G_2$\\
+	Entscheide, ob $G_1\cong G_2$.\\
+	$\Rightarrow$ Bisher angenommen: Problem nicht effizient lösbar.\\ Aber am 10.11.2015 wurde in einem Vortrag bewiesen, dass es Quasipolynomiell lösbar ist, also sehr nah an den polynomiellen Problemklassen liegt.\\\\
+	\textbf{Färbbarkeit}\\
+	Definition: Sei G=(V,E) ein Graph. G heißt k-färbbar (k-partit), wenn es eine Abbildung f: V$\rightarrow$\{0,1,...,k-1\} so gibt, dass gilt:\\
+	$\forall$ \{x,y\}$\in$E: f(x)$\neq$f(y)\\
+	Jede solche Abbildung f heißt k-Färbung (Färbung) von G.\\
+	Beispiel: Siehe Tafelbild.\\
+	Für jeden endlichen Graphen  gibt es ein k so, dass der Graph k-färbbar ist,\\ z.B. k:=max\{$d_G(v)|v\in V(G)$\}+1\\
+	Diese Formel gibt nicht die minimale  Zahl für k aus.\\
+	$\Rightarrow$ Wenn ein Graph 2-färbbar ist, dann ist er auch 4-färbbar.\\
+	Also wenn ein Graph  k-färbbar ist, dann ist er auch j-färbbar mit j$\geq$k.\\\\
+	2-färbbar=2-partit=bipartit\\\\
+	\textbf{Satz:} Ein endlicher Graph G ist 2-färbbar genau dann, wenn G keinen Kreis ungerader Länge enthält.\\
+	\textbf{Beweis:} (1) ($\Rightarrow$) zu  zeigen: Wenn G bipartit ist, dann enthält G keinen Kreis ungerade Länge\\
+	\textbf{Annahme:} G enthält doch einen Kreis ungerader Länge.\\
+	Dann werden zum Färben des Kreises mindestens drei Farben benötigt. Widerspruch.\\ 
+	(2) ($\Leftarrow$) Zu zeigen: Wenn der Graph G keinen ungeraden Kreis enthält, dann gibt es eine 2-Färbung für G.\\
+	Es genügt die Behauptung für jede Zusammenhangskomponente zu zeigen.\\
+	Sei C eine Zusammenhangskomponente von G. Sei u ein beliebiger Knoten aus V(C).\\
+	(1) f(u):=0\\
+	(2) Gilt \{u,v\}$\in$E, dann f(v):1\\
+	(3) Sind alle Knoten gefärbt, dann ist die Behauptung bewiesen. (C ist bipartit)\\
+	(4) Falls nicht: Es existiert ein Knoten w$\in$V(C), der noch nicht gefärbt ist, aber einen Nachbarn w' hat, der schon gefärbt ist.\\
+	Setze f(w):=1-i.\\
+	Die Farbe von dem Knoten w ist eindeutig bestimmt, weil alle schon gefärbten Nachbarn von w, die gleiche Farbe haben.(Sonst würde es ungerade Kreise geben.)\\
+	(5) Gehe zu (3)\\
+	Weil  G endlich ist, ist G nach endlich vielen Schritten mit 2 Farben gefärbt.\\\\
+	Bemerkung: Es ist für k>2, kein effizienter Algorithmus bekannt, der entscheidet, ob ein Graph g k-färbbar ist.\\
+	\\\textbf{Definition:} Ein Graph G heißt Baum, wenn G zusammenhängend ist und keinen Kreis enthält.\\
+	Ein Knoten vom Grad 1 in einem Baum wird Blatt genannt.\\
+	Graphen, die keinen Kreis enthalten, heißen Wälder.\\
+	Bemerkung: Bäume und Wälder sind 2-färbbar.\\
+	Beispiel: Isomorphieklassen für Bäume mit 5 Knoten: Siehe Tafelbild.\\\\
+	\textbf{Lemma:} Sei G=(V,E) ein endlicher Baum\\
+	(1) Ist |V|>1, dann hat G mindesten 2 Blätter.\\
+	(2) Es gilt: |E|=|V|-1.\\
+	(3) Sind v,w$\in$ V, dann gibt es genau einen Weg in G von v nach w.\\
+	\textbf{Beweis:}  (1) Siehe Tafelbild\\
+	(2) Induktion über die Knotenanzahl n: \\
+	Induktionsanfang: (2) gilt, weil 1-1=0 $\surd$\\
+	Induktionsschritt: Induktionsvoraussetzung: Die Behauptung gelte für alle Bäume mit Knotenanzahl$\leq$n\\
+	Induktionsbehauptung: Dann hat G Kantenanzahl (n+1)-1=n\\
+	Induktionsbeweis: G enthält ein Blatt v.\\
+	G-v ist zusammenhängend und kreislos, also ein Baum und hat deshalb Kantenanzahl  n-1 (nach Induktionsvorausssetzung)\\
+	G  hat durch das hinzunehmen der einen Kante des Blattes genau (n-1)+1=n Kanten. $\square$\\\\\\
+	\textbf{Lemma:} Sei G ein endlicher Graph. Dann sind äquivalent:\\
+	(1) G ist ein Baum\\
+	(2) G ist ein minimal zusammenhängender Graph (minimale Kantenanzahl)\\
+	(3) G ist maximal kreislos (Hinzufügen erzeugt in jedem Fall einen Kreis)\\
+	
+	
+	
+\end{document}
