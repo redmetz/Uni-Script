@@ -1,0 +1,58 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	Rechenregeln für Vektoren
+	\normalsize
+	
+	\begin{enumerate}
+		\item 
+		Das Nullelement in einem VR V ist eindeutig bestimmt, denn:\\
+		Annahme: $0_1, 0_2$ seien Nullelemente\\
+		Dann gilt: $[0_2 = 0_1 + 0_2 = 0_1]$\\
+		$---v_4 Nullelemente --- v_4 Nullelemente --- nochmal nachfragen$
+		
+		
+		\item
+		Es gibt $0_k \cdot v = 0$ für jedes $v \in V$; denn:\\
+		$0_k \cdot v = (0_k + 0_k) \cdot v = 0_k \cdot v + 0_k \cdot v$
+		
+		$NOCHMAL - MACHEN - FRAGEN$
+		
+		
+		
+		\item
+		$k\cdot 0_v = 0_v$ für alle $k \in K$ \hspace{2 cm} $k\cdot 0_v = k \cdot (0_v + 0_v) = ...$
+		\item
+		$k_v = 0_v \Leftrightarrow k= 0_k$ oder $v = 0_v$
+		
+		\item
+		$-v = (-1) \cdot v$ für alle $v \in V$
+		
+		\item
+		$-k \cdot v = (-k) \cdot v$ für alle $k \in K$, $v \in V$
+		
+\end{enumerate}
+	Definition\\
+	Sei (V, $+$, $(k \vert k \in K)$) ein K-VR, U $\in$ V\\
+	U heißt Untervektorraum (UVR) des K-VR V, denn:\\
+	\begin{enumerate}
+		\item $0_v \in U$
+		\item Sei $v_1, v_2 \in U$ dann $v_1 +v_2 \in U$\\ (Abgeschlossenheit bezüglich $+$)
+		\item Sei $k \in K$, $V \in U$ Denn $k \cdot V \in U$\\ (Abgeschlossenheit bezüglich Skalarmultiplikation)
+	\end{enumerate}
+	Bemerkung\\
+	Jeder VR V hat die UVR
+	\begin{enumerate}
+		\item V
+		\item ${0_v} (Nullraum)$
+	\end{enumerate}
+	$\rightarrow$ trivialer UVR
+\end{document}

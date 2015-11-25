@@ -1,0 +1,56 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	Abelsche Gruppen
+	\normalsize
+	Beweis\\
+	$(V;+)$ abelsche Gruppe $[-v]$\\
+	$(V; +, ^{-1}, 0)$
+	\begin{enumerate}
+		\item $V \rightarrow$ Trägermenge
+		\item $+ \rightarrow$ Gruppenkomposition
+		\item $^{-1} \rightarrow$ Inversenbildung
+		\item $0 \rightarrow$ Nullelemente 
+	\end{enumerate}
+	$(v; (k\vert k \in K))$ k 1-stellige Operationen sei $k \in K$
+	\\
+	\\
+	Beispiele für Vektorräume
+	\begin{enumerate}
+		\item $\mathbb{R}$ bilden einen $\mathbb{R}$-VR, $\mathbb{C}$ bildet einen $\mathbb{C}$-VR\\  
+			GF(2) bildet einen GF(2), allgemein: jeder Körper K bildet einen K-VR
+		\item Sei K ein Körper $K^{m\times n}$ bildet er einen K-VR,\\ +i Matrizenaddition, $(k \vert k \in K)$: Skalarmultiplikation
+		
+		\item $\mathbb{R}:=\mathbb{R}^{n\times 1} = \{ \begin{pmatrix}
+		r_1 \\ ... \\r_n
+		\end{pmatrix}
+		\vert
+		r_1, ...,r_n \in \mathbb{R}
+		\}$ mit Matrizenaddition; Skalarmultiplikation $\mathbb{C}^n$, GF(2) z.B.: $n=2$ $K = \mathbb{R}$
+		
+		\includegraphics{Bild1}
+		
+		\item Sei ein Körper A Menge, $A= \emptyset$ \\
+		Vektoren: $f:$ $A \rightarrow K$: $a \mapsto f(a)$\\
+		Addition: $f_1+f_2$: $a \mapsto f_1 (a)+f_2 (a)$ (Addition in K)\\
+		Skalarmult.: kf: $a \mapsto k\cdot f(a)$ \hspace{1 cm} $(k \in K)$
+		
+		\item $\mathbb{C}[a,b]$: VR der auf dem abgeschlossenen Intervall $[a,b]$ stetigen Funktionen
+		
+		\item A Menge, $A\not = 0$\\
+		Vektoren:\\ $P(A)=\{M \vert M \subset A\}$\\\\
+		Addition:\\ $M_1 + M_2 := M_1 \triangle M_2 = (M_1 \setminus M_2)\cup (M_2\setminus M_1)$\\\\
+		Skalarmultiplikation\\ $0 \cdot M = \emptyset$\\ $1 \cdot M = M$
+		
+	\end{enumerate}
+	
+\end{document}

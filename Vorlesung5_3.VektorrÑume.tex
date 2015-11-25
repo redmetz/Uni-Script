@@ -1,0 +1,66 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	Vektorräume
+	\normalsize
+	\\
+	Bemerkung\\
+	Vektoren sind Elemente von Vektorräumen, z.B. $\nearrow, \pi, i , 2+3i ,\int_{0}^{1}\!f(x)\,\mathrm{d}x$\\
+	\\
+	Definition\\
+	Sei K ein Körper, Ein K -Vektorraum (kurz: $K:-VR$ also VR über k) $(V; +, (k|k\in K))$ besteht aus:\\
+	\begin{enumerate}
+		\item einer Menge V $(V \not \in \emptyset)$
+		\item einer Addition $+; v\times v \rightarrow v$
+		\item einer Skalarmultiplikation $(k|k \ in K); K \times K \rightarrow V$ mit der Eigenschaften (v1) bis (v10)
+	\end{enumerate}
+		Die Elemente von V heißen Vektoren
+		\\
+		Bezeichnungen:
+		\\
+		$\mathbb{R}-VR$ (d.h. $K=\mathbb{R}$): reeller VR\\
+		$\mathbb{C}-VR$ (d.h. $K=\mathbb{C}$): komplexer VR\\
+		\\
+		kurz: VR V (wenn klar ist, um welchen Körper es geht)
+		\\
+		$\vec{V}\in V$ \hspace{2cm} Skalar $\rightarrow k\in K$ 
+		\\
+		\\
+		Vektorräume - Axiome
+		\begin{enumerate}
+			\item Zu je zwei $v_1, v_2 \in V$ existiert ein eindeutig bestimmtes $v_1+v_2$   in $V$
+			
+			\item Für alle $v_1$, $v_2$, $v_3$ $\in V$ gilt: $(v_1 + v_2) +v_3 = v_1 + (v_2 + v_3)$ \\ (+ ist assoziativ)
+			
+			\item Für alle $v_1, v_2 \in V$ gilt: $v_1+v_2 = v_2+v_1$
+			\\ (+ ist kommutativ)
+			
+			\item Es gibt in V ein Element $0 (Null, Nullvektor)$ mit $v+0=0+v=v$ für alle $v \in V$
+			
+			\item Zu jedem $v \in V$ existiert ein $-v \in V$ mit $v+-v = -v+v=0$
+			
+			\item Zu jedem $k \ in K$ und jedem $v \in V$ existiert ein eindeutig bestimmtes $k \cdot v \in V$
+			
+			\item Für alle $v \in V$ gilt: $1 \cdot v = v$ (1 bzw. $1_k$ ist das Einselement aus K)
+			
+			\item Für alle $k_1 , k_2 \in K$ und alle $v \in V$ gilt: $k_1 \cdot (k_2 \cdot v)=(k_1 \cdot
+			 k_2) \cdot v$
+			 
+			 \item Für alle $k_1 , k_2 \in K$ und alle $v in V$ gilt: $(k_1 + k_2) \cdot v = k_1\cdot v + k_2 \cdot v$ 
+			 
+			 \item Für alle $k \in K$ und alle $v_1 , v_2 \in V$ gilt: $k \cdot (v_1 + v_2) = k \cdot v_1 + k \cdot v_2$
+			  
+			
+			
+		\end{enumerate}
+		
+\end{document}
+

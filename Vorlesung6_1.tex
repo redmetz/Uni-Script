@@ -1,0 +1,91 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	VORLESUNG 6 NACH TITEL FRAGEN - Teil2
+	\normalsize
+	\\
+	\\
+	Sei V ein $K-VR$, $T \subseteq V$ \\
+	Dann ist Span(T) der kleinste UVR von V, der sämtliche Elemente von T enthält\\
+	1.Fall: $T=\emptyset \rightarrow Span(T) = \{ 0_v  \}$ Nullraum\\
+	2.Fall: $T = \{ v_1, ... , v_n      \} \rightarrow Span(T) = \{ k_1 \cdot v_1 + k_2 \cdot v_2 + ... + k_n \cdot v_n  \vert k_1,..., k_n \in K    \}$ \\
+	(Linearkombination $v_1,v_2, v_n$ mit Koeffizienten aus K)\\ \\
+	Bsp
+	$\{
+	\begin{pmatrix}
+	r_1 + 2\cdot v_2 \\ 2 \cdot r_1 + r_3 \\ v_1 - v_2 + 5\cdot r_3	
+	\end{pmatrix} \vert r_1, r_2, r_3 \in \mathbb{R}
+	\} =: U$ ist ein UVR von $\mathbb{R}^3$\\
+	$\rightarrow U=\{  r_1 \cdot \begin{pmatrix}
+	1 \\ 2 \\ 1
+	\end{pmatrix} + r_2 \cdot \begin{pmatrix}
+	2 \\ 0 \\ -1
+	\end{pmatrix} + r_3 \cdot \begin{pmatrix}
+	0 \\ 1 \\ 5
+	\end{pmatrix} \vert r_1, r_2, r_3 \in \mathbb{R}      \} = Span(\{ r_1, r_2, r_3    \})  $	\\
+	\\\\
+	Ziel: Jedem / möglichst viele VR durch eine möglichst endliche Menge T von Vektoren beschreiben, so das $V = Span(T) gilt$ \\ 
+	T wird ein Erzeugersystem für den VR V genannt. \\ \\
+	Bemerkung:\\
+	Jeder VR mit mehr als einem Element hat verschiedene Erzeugersysteme.\\ \\
+	gewollt:\\
+	möglichst kleine Erzeugersysteme XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \\ \\
+	Definition:\\
+	Sei V ein K-VR und $(v_1, v_2, ... , v_n)$ eine Folge von Vektoren $v_1, ... , v_n \in V$\\
+	\\
+	$(v_1, ... , v_n)$ heißt linear unabhängig, wenn gilt:\\ $\forall k_1,...,k_n \in K$ gilt: $k_1 \cdot v_2 + ... . k_n \cdot v_n = 0_v \rightarrow k_1 = ... = k_n = 0_k$ \\ \\
+	Ansonsten heißt $(v_1, ..., v_n)$ linear abhängig.
+	\\
+	Beweis: Die Entscheidung linear(un)abhängig wird durch lösen eines LGS getroffen
+	\\ \\
+	\newpage
+	Bsp. \begin{enumerate}
+		\item
+		$\begin{pmatrix}
+			1 \\ 0 \\ 0
+		\end{pmatrix},
+		\begin{pmatrix}
+			 1 \\ 1 \\ 0
+		\end{pmatrix}, 
+		\begin{pmatrix}
+			1 \\ 1 \\ 1
+		\end{pmatrix}$ ist linear unabhängig, denn das homogene LGS mit der Koeffizientenmatrix $\begin{pmatrix}
+		1 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 1
+		\end{pmatrix}$ hat genau dann eine Lösung nämlich $\begin{pmatrix}
+			0 \\ 0 \\ 0
+		\end{pmatrix} \rightarrow k_1 = k_2 = k_3 = 0$
+		
+		\item ($\begin{pmatrix}
+			1 \\ 0 \\ 0
+		\end{pmatrix}, \begin{pmatrix}
+			1 \\ 1 \\ 0
+		\end{pmatrix}, \begin{pmatrix}
+			2 \\ 1 \\ 0
+		\end{pmatrix}$) ist linear abhängig, denn das homogene LGS mit der Koeffizientenmatrix $\begin{pmatrix}
+			1 & 1 & 2 \\ 0 & 1 & 1 \\ 0 & 0 & 0
+		\end{pmatrix}$ hat mehr als eine Lösung\\ z.B. $k_1\cdot \begin{pmatrix}
+			1 \\ 0 \\ 0
+		\end{pmatrix} + k_2 \cdot \begin{pmatrix}
+			1 \\ 1 \\ 0
+		\end{pmatrix} + k_3 \cdot \begin{pmatrix}
+			2 \\ 1 \\ 0
+		\end{pmatrix} = \begin{pmatrix}
+			0 \\ 0 \\ 0
+		\end{pmatrix}$\\
+		$k_1 = 1$, $k_2 = 1$, $k_3 = -1$
+	\end{enumerate}	
+	Bemerkung:\\
+	Analog pricht man von Linear (un)abhängigen Mengen von Vektoren bzw. von linear (un)abhängigen Vektoren \\ \\
+	Beweis:\\
+	$\emptyset$ ist linear unabhängig
+		
+\end{document}

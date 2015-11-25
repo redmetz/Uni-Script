@@ -1,0 +1,106 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	reduzierte Zeilenstufenform eines LGS
+	\\
+	\\
+	\\
+	\normalsize
+	Lösungsmenge eines LGS notieren, wenn es in reduzierter Zeilenstufenform gegeben ist.
+	\\
+	\\
+	$
+	\begin{tabular}{c c c c c c c|c}
+		1 & 0 & -7 & 2 & 0 & 1 & 0 & 0
+		\\
+		0 & 1 & 2 & -3 & 0 & -5 & 0 & 8
+		\\
+		0 & 0 & 0 & 0 & 1 & 5 & 0 & 15
+		\\
+		0 & 0 & 0 & 0 & 0 & 0 & 1 & 22
+		\\
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 1
+	\end{tabular}
+	\rightarrow
+	\begin{pmatrix}
+		x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \\ x_7
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		0 -7\cdot r - 2\cdot s - t
+		\\
+		8 -2\cdot r + 3\cdot s + 5\cdot t
+		\\
+		r
+		\\
+		s
+		\\
+		15 - 5\cdot t
+		\\
+		t
+		\\
+		42
+	\end{pmatrix}
+	$
+	$
+	r, s, t \in \mathbb{R}
+	$
+	\\
+	\\
+	Allgemein gilt:
+	\\
+	\\
+	---Matrix---
+	\\
+	\\
+	$
+	a_i \not = 0 $ für $ i=1,...r
+	$
+	\\
+	\\In dieser Form ist eine Entscheidung möglich ob die Lösungsmenge eine leere Menge ist. $L = {\o}$ genau dann wenn ein $i \in \{r+1,...,m\}$ existiert so, dass $b_i \not = 0$
+	\\
+	\\
+	Elementare Zeilenumformungen
+	\begin{enumerate}
+		\item Vertauschen zweier Zeilen
+		\item Multiplizieren einer Gleichung mit einem Faktor $k\in K\{0\}$
+		\item Addieren des k-fachen einer anderen Zeile in eine Zeile $(k\in K)$
+	
+	\end{enumerate}
+	
+	Satz: Elementare Zeilenumformungen ändern die Lösungsmenge des LGS nicht.
+	\\
+	\\
+	\\
+	Beweis für 2)
+	\\
+	\\
+	BILD BILD BILD BILD BILD\\
+	2 Stück zur Umformung
+	\\
+	\\
+	Algorithmus
+	\\
+	\\
+	BILD BILD BILD BILD\\
+	2 zur Zeilenstufenform und zur reduzierten Zeilenstufenform
+	\\
+	\\
+	Beweis: Bei LGS in ZSF kann entschieden werden ob die Lösungsmenge leer ist
+	\\
+	Be: Beim erzeugen der ZSF mittels elementarer Zeilenstufenumformungen darf man Spalten vertauschen, wenn man die Variablennamen ...
+	\\
+	\\
+	BILD BILD BILD BILD BILD
+	mit Bsp
+	\\
+\end{document}
+

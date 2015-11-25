@@ -1,0 +1,94 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	VORLESUNG 6 NACH TITEL FRAGEN
+	\normalsize
+	\\
+	\\
+	Bsp. $K=GF(2)$, $V=GF(2)$ ist ein GF(2)-VR\\
+	Jeder Untervektorraum (UVR) von $GF(2)^n$ wird Linearcode genannt\\\\
+	z.B.: $U=\{\begin{pmatrix}
+		v_1\\...\\v_7
+		\end{pmatrix} \in GF(2)^7 \vert \begin{pmatrix}
+		1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		1 & 1 & 0 & 0 & 1 & 1 & 0 \\
+		1 & 0 & 1 & 0 & 1 & 0 & 1
+		\end{pmatrix} \cdot \begin{pmatrix}
+		v_1 \\ ... \\ v_7
+		\end{pmatrix} = \begin{pmatrix}
+		0 \\ 0 \\ 0
+		\end{pmatrix}\}$
+		\\
+		\\
+		.\hspace{4.7 cm} <----------- H ----------->\\
+		.\hspace{4.7 cm} <--- homogenes LGS lösen um XXX zu bestimmen--->
+		\\
+		$\begin{pmatrix}
+		1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		1 & 0 & 1 & 0 & 1 & 0 & 1
+		\end{pmatrix}
+		\\ \\ \\ 
+		\begin{pmatrix}
+		1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 1 & 1 & 1 & 0 \\
+		0 & 1 & 0 & 1 & 1 & 0 & 1
+		\end{pmatrix}
+		\\ \\ \\
+		\begin{pmatrix}
+		1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		0 & 1 & 0 & 1 & 1 & 0 & 1 \\
+		0 & 0 & 1 & 1 & 1 & 1 & 0
+		\end{pmatrix}
+		\\ \\ \\
+		\begin{pmatrix}
+		1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		0 & 1 & 0 & 1 & 1 & 0 & 1 \\
+		0 & 0 & 1 & 1 & 1 & 1 & 0
+		\end{pmatrix}
+		\\ \\ \\
+		\begin{pmatrix}
+		v_1 & v_2 & v_3 & v_4 & v_5 & v_6 & v_7 \\
+		1 & 1 & 1 & 1 & 0 & 0 & 0 &\vert 0\\
+		1 & 1 & 1 & 1 & 0 & 0 & 0 &\vert 0\\
+		1 & 0 & 1 & 0 & 1 & 0 & 1 &\vert 0
+		\end{pmatrix}
+		$\\
+		\\
+		$v_1 + v_4 + v_ + v_7 = 0$\\
+		$v_1 = -v_4 - v_6 - v_7 = v_4 = v_6 = v_7$\\
+		$v_4 = a$, $v_6 = c$, $v_7 = d$
+		\\
+		$\begin{pmatrix}
+			v_1 \\ v_2 \\ v_3 \\ v_4 \\ v_5 \\ v_6 \\ v_7
+		\end{pmatrix}
+		=
+		\begin{pmatrix}
+		a + c + d \\ a + b +d \\ a + b +c \\ a \\ b \\ c \\d
+		\end{pmatrix}
+		$ mit $a, b, c, d \in GF(2)$\\\\
+		\\\\
+		Bsp. $K=\mathbb{R}$, $V=\mathbb{R}^2$ oder $\mathbb{R^3}$ (allgemein: $\mathbb{R}^n$)\\
+		UVR $U_1=\{\begin{pmatrix}
+		a \\ b \\ c
+		\end{pmatrix} \in \mathbb{R}^3 \vert k \in \mathbb{R} \subseteq \mathbb{R}^3 \} $\\
+		(gerade durch den Ursprung)\\
+		$U_2=\{ k_1 \cdot \begin{pmatrix}
+		a \\ b \\ c 
+		\end{pmatrix} + k_2 \cdot \begin{pmatrix}
+		d \\ e \\ f
+		\end{pmatrix} \vert k_1, k_2 \in \mathbb{R} \}$\\
+		(Ebene durch den Ursprung)
+		
+		
+		
+\end{document}

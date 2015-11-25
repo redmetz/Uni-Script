@@ -1,0 +1,67 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	Matrizenring
+	\\
+	\\
+	\\
+	\normalsize
+	Beweis ($K^{nxn};+;\cdot$) bildet einen Ring (Matrizenring)
+	\\
+	Aber keinen Körper $\rightarrow$ da man nicht durch beliebige Matrizen dividieren kann
+	\\
+	\\
+	Beweis: Man kann nicht durch die Nullmatrix dividieren, denn \\
+	$A \cdot 0_{n\times m} = B_{n\times n} \cdot 0_{n\times n} \not\Rightarrow A = B \hspace{1cm} (A \in K^{n\times n} ) $
+	\\
+	\\
+	Beweis: Es gibt auch Matrizen, die nicht die Nullmatrix sind, und durch die man nicht dividieren kann. z.B.:
+	\\
+	
+	\hspace{0cm}
+	$\begin{pmatrix}
+		0 & 1 \\ 0 & 1
+	\end{pmatrix}$ denn:
+	$\begin{pmatrix} 
+		0 & 0 \\ 0 & 0
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1 & 0 \\ 0 & 0
+	\end{pmatrix}
+	\cdot
+	\begin{pmatrix}
+		0 & 0 \\ 1  & 1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		0 & 0 \\ 1 & 0
+	\end{pmatrix}
+	\cdot
+	\begin{pmatrix}
+		0 & 0 \\ 1 & 1
+	\end{pmatrix}
+	$
+	und
+	$
+	\begin{pmatrix}
+		1 & 0 \\ 0 & 0
+	\end{pmatrix}
+	\not = 
+	\begin{pmatrix}
+		0 & 0 \\ 1 & 0
+	\end{pmatrix}$
+	\\
+	\\
+	\\
+	Um durch $A \in K^{n\times n} $dividieren zu können, muss die inverse Matrix $A^{-1}$ existieren.
+\end{document}
+

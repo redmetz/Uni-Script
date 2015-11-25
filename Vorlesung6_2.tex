@@ -1,0 +1,45 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	VORLESUNG 6 NACH TITEL FRAGEN - Teil3
+	\normalsize
+	\\
+	\\
+	Definiton:\\
+	Sei V ein K-VR, $T \subseteq V$ \\
+	T heißt eine Basis von V, wenn gilt:\\
+	\begin{enumerate}
+		\item $Span(T)=V$ (T ist ein erzeugendes System von V)
+		\item T ist linear unabhängig
+	\end{enumerate}
+	Beweis:\\
+	eine Basis ($k_1, k_2, ..., k_n$) ist ein minimales erzeugendes System, denn $b_k \not \in Span(\{ k_1, ..., k_n  \}  \backslash \{ b_i  \})$\\ \\
+	Anmerkung:\\
+	$b_i \ in Span(...) \rightarrow$ es existiert\\
+	$k_1,...,k_{i-1},k_{i+1},...,k_n$ mit $k_1\cdot b_1 + ... +k_{i-1} \cdot b_{i-1} + k_{i+1} \cdot b_{i+1} + k_n \cdot b_n = b_i$ \\
+	$\rightarrow k_1 \cdot b_1 + ... + (-1)\cdot b + ... + k_n \cdot b_n = 0_v$ ????????????????  \\
+	$\rightarrow (b_1,...,b_n)$ linear abhängig \\ \\
+	Satz: \\
+	Sei V ein K-VR und $B_1,B_2$ seine Basen dieses VR. Dann gilt: $\vert B_1 \vert = \vert B_2 \vert$ \\ \\
+	Definition:\\
+	Sei V ein K-VR und B eine Basis dieses VR.\\
+	Gilt: $\vert B \vert = n \in \mathbb{N}$, dann ist V ein n-dimensionaler VR (dim V = n)\\
+	Andernfalls ist V ein unendlich Dimensionaler VR (dim V = $\infty$) \\ \\
+	Satz:\\
+	Sei V ein K-VR und ($b_1,...,b_n$) eine Basis dieses VR. Dann existiert für jedes $v \in V$ eindeutig bestimmte $k_1,...,k_n \in K$ \\mit $v=k_1\cdot b_1 + ... + k_n\cdot b_n)$ (Basisdarstellung von V)\\
+	Man nennt $V_{b_1,...,b_n}=\begin{pmatrix}
+		k_1 \\ ... \\ k_n
+	\end{pmatrix}_{b_1,...,b_n}$ den Koordinatenvektor von v bzgl. $(b_1,..,b_n)$
+	
+		
+		
+\end{document}

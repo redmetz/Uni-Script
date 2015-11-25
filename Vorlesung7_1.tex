@@ -1,0 +1,180 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Skript Vorlesung 7}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	Kern und Rang von Matrizen
+	\normalsize
+	\\\\
+	Zusammenhang LGS/Matrizen/Unter-VR\\
+	Lösbarkeitskriterium für LGS $\rightarrow$ LGS lösbar $\leftrightarrow$ $L \not = \emptyset$
+	\\\\
+	LGS$ \begin{pmatrix}
+	a_{11} & ... & a_{1n} \\ a_{m1} & ... & a_{mn}
+	\end{pmatrix}
+	\cdot \begin{pmatrix}
+	x_1 \\ ... \\ x_n
+	\end{pmatrix} = \begin{pmatrix}
+	b_1 \\ ... \\ b_n
+	
+	\end{pmatrix} = \begin{pmatrix}
+		a_{11} \\ ... \\ a_{mn}
+	\end{pmatrix} \cdot x_1 + ... + \begin{pmatrix}
+		a_{1n} \\ ... \\ a_{mn}
+	\end{pmatrix} \cdot x_n = \begin{pmatrix}
+		a_{11} \cdot x_1 + ... + a_{1n} \cdot x_n \\ ... \\ a_{m1} \cdot x_1 + ... + a_{mn} \cdot x_n
+	\end{pmatrix}$
+	
+	
+	$A_{m \times n} \cdot x_{n \times 1} = b_{m \times 1}$
+	\\
+	\\
+	\begin{enumerate}
+		\item
+		Homogene LGS: $A \cdot x = 0$ ($A_{m \times n} \cdot x_{n \times 1} = 0_{m \times 1}$)\\
+		Lösungsmenge $L* = \{ x \in K^n \vert A\cdot x = 0 \}$; $L* \not = \emptyset$, denn $0 \in L*$\\\\
+		Beweis: $L*$ ist ein UVR von $K^n$ (K-Körper)
+		\begin{enumerate}
+			\item
+			$L* \not = \emptyset, 0 \in L*$
+			\item
+			$x_1,x_2 \in L* \rightarrow x_1 + x_2 \in L*$, denn:\\
+			$A \cdot (x_1 + x_2) = A \cdot x_1 + ! \cdot x_2 = 0_{K^m}+0_{K^m} = 0_{K^m}$
+			\item
+			$x \ in L*$ und $k \in K \rightarrow k \cdot x \in L*$, denn:\\
+			$A\cdot (k \cdot x) = k \cdot A \cdot x = k \cdot 0_{m \times 1} = 0_{m \times 1}$
+		\end{enumerate}
+	
+	Definition:\\
+	Sei $A \in K^{m \times n}$ (K-Körper), dann nennt man \\
+	$Ker(A):= \{x \in K^n \vert A \cdot x = 0_{m \times 1}\}$\\
+	den Kern der Matrix A\\\\
+	Bemerkung:\\
+	Den Kern einer Matrix A kann man durch Lösen eines homogenen LGS mit Koeffizienten-Matrix A bestimmen\\\\
+	Bemerkung:\\
+	Dr Kern einer Matrix $A \in K^{m \times n}$ ist ein UVR von $K ^ n$\\\\
+	Bsp.\\
+	$A \in \mathbb{R}^{3 \times 3}$ \hspace{1cm} $A = \begin{pmatrix}
+		1 & 1 & 1 \\ 1 & -1 & 1 \\ 1 & 0 & 1
+	\end{pmatrix}$ \hspace{2cm} $Ker(A)=\{ \begin{pmatrix}
+		1 \cdot t \\ 0 \cdot t \\ -1 \cdot t
+	\end{pmatrix} \vert t \in \mathbb{R}  \})$ (1 freier Parameter)\\
+	$\rightarrow Ker(A)= \{ t \cdot \begin{pmatrix}
+		1 \\ 0 \\ -1
+	\end{pmatrix} \vert t \in \mathbb{R} \}$\\
+	$\rightarrow dim Ker(A) = 1$, Basis von Ker(A): $\begin{pmatrix}
+		1 \\ 0 \\ -1
+	\end{pmatrix}, Ker(A)=Span(\{ \begin{pmatrix}
+		1 \\ 0 \\ 1
+	\end{pmatrix}  \})$
+	
+	
+	\item
+	Inhomogene LGS: $A \cdot x = b = \emptyset$ ($A_{m\times n} \cdot x_{n \times 1} = b_{m \times 1} \not = 0_{m \times 1}$)
+	\\
+	Lösungsmenge $L = \{ x \in K^n \vert A \cdot x = b \}$, $0_{K^n} \not \in L \rightarrow L$ kein VR (UVR)\\
+	Lösungsmenge $L* des zugehörigen homogenen LGS:$\\
+	$L* = \{ x \in K^n \vert A \cdot x = 0_{m \times n} \}$\\
+	Sei $A \cdot x_1 = b$ (d.h. $x_1 \in L$)\\
+	Dann $L = \{ x_1 + x^* \vert x^* \in L^* \}$ \\
+	Bsp. $\begin{pmatrix}
+		1 & 1 & 1 \\ 1 & -1 & 1 \\ 1 & 0 & 1
+	\end{pmatrix} \cdot \begin{pmatrix}
+		x_1 \\ x_2 \\ x_3
+	\end{pmatrix} = \begin{pmatrix}
+		3 \\ 1 \\ 2
+	\end{pmatrix}$\\
+	spezielle Lösung: \\
+	$L = \{ \begin{pmatrix}
+		1 \\ 1 \\ 1 
+	\end{pmatrix} + \begin{pmatrix}
+		t \\ 0 \\ -t
+	\end{pmatrix} \vert t \in \mathbb{R} \}$
+\end{enumerate}
+\newpage
+Behauptung:\\
+$L= x_1 + L^*$, zu zeigen:\\
+$L \subseteq x_1 + L^*$ \\
+(i) $x_1 + L^* \subseteq L$, also: $A \cdot x_1 = b$ und $x^* \in L^* \rightarrow x_1+x^* \in L$\\
+(ii) $L \subseteq x_1 + L^*, also x_2 \in L \rightarrow x_2 \in x_1 + L^*$, d.h. es gibt ein $x^* \in L^*$ mit $x_2 = x_1 + x^* \rightarrow x^* = x_2-x_1$\\\\
+Wir zeigen:\\
+$X_1, x_2 \in L \rightarrow x_2 - x_1 \in L^*$\\
+$A \cdot x_1 = b$,
+$A \cdot x_2 = b$\\
+$\rightarrow A\cdot (x_1 - x_1) = A \cdot x_2 - A \cdot x_1 = b-b =0$\\\\
+Bsp:\\
+$L = \{ (\begin{pmatrix}
+	8 \cdot t_1 + 15 \cdot t_2 \\ 15 + 8 \cdot t_1 \\ 8 + 13 \cdot t_2
+\end{pmatrix}) \vert t_1,t_2 \in \mathbb{R} \}$ \\
+$=\{ \begin{pmatrix}
+	0 \\ 15 \\ 8
+\end{pmatrix} + \begin{pmatrix}
+	8 \\ 8 \\ 0
+\end{pmatrix} \cdot t_1 \}$\\
+... BSP ABSCHREIBEN
+\\\\
+Definition:\\
+Sei K ein Körper und V ein K-VR. Sei U ein UVR von V. Dann nennt man $v+U := \{ v + u \vert u \in U\}$ ($v \in V$) einen affinen Teilraum von V.\\\\
+Bemerkung: \\
+$v+U ist ein UVR \rightleftarrows v\in U$\\
+\\
+Beispiel:\\
+$V = \mathbb{R}^2$\\
+------------BILD--------------\\
+Geraden, die nicht durch den Ursprung verlaufen, beschreiben keinen UVR, sondern einen affinen Teilraum\\
+\\
+Bemerkung:\\
+$dim(v + U) := dim(U)$\\
+\\
+Bemerkung:\\
+0-dim. affine TR \hspace{1cm} (Punkt)\\ 1-dim. affine TR \hspace{1cm}(Gerade)\\ 2-dim. affine TR \hspace{1 cm}(Ebene)\\ (n-1) dim. affine TR für einen VR der Dim n \hspace{1cm}(Hyperebene)\\\\
+\newpage
+$A \in K^{m \times n}, A = (\begin{pmatrix}
+	...\\...\\...
+\end{pmatrix}\cdot ... \cdot \begin{pmatrix}
+	... \\ ... \\ ...
+\end{pmatrix} ) = (s_1,s_2,...,s_n)$ \hspace{1cm} Spaltenvektoren\\
+$Col(A):= Span(\{ s_1, ..., s_n \}) = \{ t_1 \cdot s_1 + ... + t_n \cdot t_n \in K \} = \{ b \in K^m \vert ex ex. t_1, ..., t_n \in K mit b = t_1 \cdot x_1 + ... + t_n \cdot x_n \}$ \\
+Spaltenraum von der Matrix A $\rightarrow Col(A) = \{ b \in K^m \vert A \cdot x = b \rightarrow lösbar \}$\\\\
+Definition\\
+Die Dimension von Col(A) heißt Spaltenrang von A. \\
+A= --BILD---- = $\begin{pmatrix}
+	z_1 \\ ... \\ z_n
+\end{pmatrix}$\\
+$Row(A) := Span(\{ z_1,..., z_2 \})$\\\\
+Definition\\
+Die Dimension von Row(A) heißt Zeilenrang von A \\\\
+Satz\\
+dim(Col(A)) = dim(Row(A)) für jede MAtrix A \\\\
+Definition\\
+Man nennt rg(A):=dim(Col(A)) (=dim Row(A))\\
+\\
+Bemerkung\\
+$rg(a) <= do, (Col(S)), min-dim (Row(A))$\\
+\\
+Bsp\\
+$A = \begin{pmatrix}
+	1 & 5 \\ 2 & 6 \\ 3 & 7 \\ 4 & 8
+\end{pmatrix} \in \mathbb{R}^{4 \times 2}$ \hspace{2cm} $rg(A) \in \{ 1, 2, 3, 4 \}$\\
+2 lineare unabhängige Spaltenvektoren $\rightarrow rg(A) = 2$\\
+$B = \begin{pmatrix}
+	1 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1
+\end{pmatrix} \in \mathbb{R}^{3 \times 3}$ \hspace{2cm } rg(B)=3 \\
+3 lin. unabh. Spaltenvektoren\\
+\\
+$C= \begin{pmatrix}
+	1 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 0 & 0
+\end{pmatrix} \in \mathbb{R}^{3 \times 3}$ \hspace{1cm} rg(c) <= 3 \hspace{1 cm} rg(c) = 2\\\\
+Rangkriterium für die Lösbarkeit von LGS:\\
+LGS $A \cdot x = b$ lösbar $\rightleftarrows$ rg(A,b) = rg(A) 
+
+\end{document}
+
+	

@@ -1,0 +1,99 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Skript Vorlesung 4}
+\author{Lukas Jährling}
+\begin{document}
+	\large
+	Beispiel aus der Codierungstheorie
+	\\
+	\\
+	\\
+	\normalsize
+	$
+	H = \begin{pmatrix}
+		1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		1 & 1 & 0 & 0 & 1 & 1 & 0 \\
+		1 & 0 & 1 & 0 & 1 & 0 & 1
+	\end{pmatrix}
+	$
+	ist die Kontrollmatrix für $(7,4)$ Haming-Code
+	\\
+	\\
+	$
+	\begin{pmatrix}
+		1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+	\end{pmatrix}
+	$
+	ist ein Codewort, denn H $\cdot \begin{pmatrix}
+		1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 0 \cdot 1 + 0 \cdot 1 + 0 \cdot 1
+		\\ ...
+		\\...
+		\\
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		0 \\ 0 \\ 0
+	\end{pmatrix}
+	$
+	\\
+	\\
+	da $
+	\begin{tabular}{c|c c}
+		+ & 0 & 1
+		\\ \hline
+		0 & 0 & 1
+		\\
+		1 & 1 & 0
+	\end{tabular}
+	$
+	und
+	$
+	\begin{tabular}{c|c c}
+		$\cdot$ & 0 & 1
+		\\ \hline
+		0 & 0 & 0
+		\\
+		1 & 0 & 1
+	\end{tabular}
+	$
+	\\
+	\\
+	\\
+	\\
+	noch ein Beispiel
+	\\
+	\\
+	$
+	\begin{pmatrix}
+		1 \\ 1 \\ 1 \\ 0 \\ 1 \\ 1 \\ 1
+	\end{pmatrix}
+	$
+	ist kein Codewort, denn 
+	$H \cdot
+	\begin{pmatrix}
+		1 \\ 1 \\ 1 \\ 0 \\ 1 \\ 1 \\ 1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 0 \cdot 1 + 1 \cdot 1 + 1 \cdot 1 + 1 \cdot 1
+		\\
+		...
+		\\
+		...
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1 \\ 0 \\ 0
+	\end{pmatrix}
+	$
+\end{document}
+
