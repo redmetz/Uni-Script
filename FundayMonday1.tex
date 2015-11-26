@@ -1,0 +1,179 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Skript Vorlesung 7}
+\author{Lukas Jährling}
+\begin{document}
+LAG\\
+Hausaufgabe H 34 Welche der folgenden Teilmengen des VR $V= \mathbb{R}^3$ sind UVR vonV? Begründen Sie Ihre Antwort
+\\\\
+Kriterien: \begin{enumerate}
+\item Nullvektor innerhalb des UVR
+\item Abeschlossenheit in Addition
+\item Abgeschlossenheit in Skalarmult.
+\end{enumerate}
+Aufgaben:\\
+a:
+\begin{enumerate}
+	\item
+	$U_i = \{ (x,y,z)^T \in \mathbb{R}^3 \vert 4 \cdot x - z = 5\cdot y\}$\\
+	\begin{enumerate}
+		\item
+		$\begin{pmatrix}
+			0 \\ 0 \\ 0
+		\end{pmatrix} \rightarrow 4 \cdot 0 - 0 = 5 \cdot 0$
+		\item
+		$x=(x_1+x_2) \rightarrow$ Erfüllt die Bedingung\\
+		$y=...$\\
+		$z=...$\\\\
+		$4 \cdot (x_1 + x_2) - (z_1+z_2) = 5 \cdot (y_1 + y_2)$\\
+		$4 \cdot x_1 - z_1 = 5 \cdot y_1 \rightarrow 4 \cdot x_1 - z_1 + 5\cdot y_1 = 0$\\
+		$4 \cdot x_2 - z_2 = 5 \cdot y_2 \rightarrow 4 \cdot x_2 - z_2 - 5 \cdot y_2 = 0$\\
+		$4 \cdot x_1 + 4 \cdot x_2 - z_1 - z_2 = 5 \cdot y_1 + 5 \cdot y_2$\\
+		$4 \cdot x_1 - z_1 - 5\cdot y_1 = - 4 \cdot x_2 + z_2 + 5 \cdot y_2 - 4 \cdot x_2 + z_2 + 5 \cdot y_2 = 0 \rightarrow 4 \cdot x_2 - z_2 - 5 \cdot y_2 =0$
+		\item
+		$k \in \mathbb{R}$\\
+		$4 \cdot x - z = 5 \cdot y$\\
+		$k \cdot 4 \cdot x - k \cdot z = 5 \cdot k \cdot y$\\
+		$k \cdot (4 \cdot x - z) = k \cdot 5 \cdot y$ \hspace{1cm} $\vert :k$\\
+		$4 \cdot x - z = 5\cdot y$
+	\end{enumerate}
+	\item
+	$U_{ii} = \{ (x,y,z)^T \in \mathbb{R}^3 \vert x >= 0, y>=0 \}$
+	\begin{enumerate}
+		\item
+		$\begin{pmatrix}
+			0 \\ 0 \\ 0
+		\end{pmatrix} \rightarrow x=0>=0, y=0 >= 0, z \in \mathbb{R}, z = 0$
+		\item
+		$x_1, x_2 \in U_2$ damit $x_1,x_2 >= 0$\\
+		Wenn $x_1, x_2 >= 0 \rightarrow x_1 + x_2 >=0$\\
+		Das Gleiche gilt für $y_1,y_2$\\
+		Wenn $z_1, z_2 \in \mathbb{R} \rightarrow z_1 +z_2 \in \mathbb{R}$
+		\item
+		$k \in \mathbb{R}$ wenn $x > 0$ und $k < 0 \rightarrow k \cdot x < 0 \rightarrow Widerspruch$
+	\end{enumerate}
+\end{enumerate}	
+b:\\
+$U = \{ f: \mathbb{R} \rightarrow \mathbb{R} \vert f(0) = f(1) \}$\\
+$U \subseteq V$\begin{enumerate}
+	\item
+	$(f+g)(0)=(f+g)(1)$\\
+	$0 = 0$ \hspace{2cm} $\{0\} \in U$
+	\item
+	Mit $f(0)=0$ und $f(1)=0 \in U$ gilt:\\
+	$(f(0)+f(1)) = 0 \rightarrow (f(0) + f(1)) \in U$
+	\item
+	Mit $f(0) = 0 = f(1)$ gilt: $f(0) \cdot \lambda = 0$ und $f(1) \cdot \lambda = 0 \rightarrow \cdot f \in U$
+\end{enumerate}
+\newpage
+---DIS---\\\\
+H28 Betrachtet wird die Menge von reellen $2 \times 2$ Matrizen\\
+$G = \{ \begin{pmatrix}
+	a & b \\ 0 & a
+\end{pmatrix} \vert a,b \in \mathbb{R}, a \not \in 0 \}$\\
+\begin{enumerate}
+	\item
+	Neutrales Element $\begin{pmatrix}
+		1 & 0 \\ 0 & 1
+	\end{pmatrix} \cdot \begin{pmatrix}
+		a & b \\ b & a
+\end{pmatrix} = \begin{pmatrix}
+	a & b \\ 0 & a
+\end{pmatrix} \cdot \begin{pmatrix}
+	1 & 0 \\ 0 & 1
+\end{pmatrix} = \begin{pmatrix}
+	a & b \\ 0 & a
+\end{pmatrix}$
+\item
+Inverses Element $\begin{pmatrix}
+	a & b \\ 0 & a
+\end{pmatrix} \cdot \begin{pmatrix}
+	c & d \\ 0 & c
+\end{pmatrix} = \begin{pmatrix}
+	1 & 0 \\ 0 & 1
+\end{pmatrix}$, c, d $\in \mathbb{R}, d\not = 0$\\
+$A \cdot c + 0\cdot b =1$\\
+$0 \cdot c + a \cdot 0 = 1$ \hspace{2cm} $a \cdot c = 1 \rightarrow c \not = 0 \rightarrow$ ex ex. ein Inverses\\
+$a \cdot d + b \cdot c = 0$\\
+$0 \cdot d + a \cdot c = 1$
+
+\newpage
+Lukas:
+$a = \begin{pmatrix}
+	a & b \\ 0 & a
+\end{pmatrix}$, $b = \begin{pmatrix}
+c & d \\ 0 & c
+\end{pmatrix}$, $c = \begin{pmatrix}
+e & f \\ 0 & e
+\end{pmatrix}$\\\\
+$a *( b * c)$\\
+$\begin{pmatrix}
+a & b \\ 0 & a
+\end{pmatrix} \cdot ( \begin{pmatrix}
+c & d \\ 0 & c
+\end{pmatrix} \cdot \begin{pmatrix}
+e & f \\ 0 & e
+\end{pmatrix})$\\\\
+Terme:\\
+oben links $c \cdot e + 0 \cdot d$ \hspace{2cm}
+oben rechts $c \cdot f + d \cdot e$\\
+unten links: $0 \cdot e + c \cdot 0$ \hspace{2cm}
+unten rechts:$ 0 \cdot f + c \cdot e$\\\\
+$\begin{pmatrix}
+a & b \\ 0 & a
+\end{pmatrix} \cdot \begin{pmatrix}
+c \cdot e & c \cdot f + d \cdot e \\ 0 & c \cdot e
+\end{pmatrix}$\\\\
+Terme:\\
+oben links $ a\cdot c \cdot e + b \cdot 0$ \hspace{2cm}
+oben rechts $a \cdot (c \cdot f + d \cdot e) + b \cdot c \cdot e $\\
+unten links: $0$ \hspace{2cm}
+unten rechts: $ 0 + a \cdot c \cdot e$\\\\
+$\begin{pmatrix}
+	a\cdot c \cdot e & a \cdot (c \cdot f + d \cdot e) + b \cdot c \cdot e \\ 0 & a \cdot c \cdot e
+\end{pmatrix}$\\\\\\
+
+(a * b) * c\\
+$(\begin{pmatrix}
+a & b \\ 0 & a
+\end{pmatrix} \cdot \begin{pmatrix}
+c & d \\ 0 & c
+\end{pmatrix}) \cdot \begin{pmatrix}
+e & f \\ 0 & e
+\end{pmatrix}$\\\\
+Terme:\\
+oben links $a \cdot c + b \cdot 0$ \hspace{2cm}
+oben rechts $a \cdot d + b \cdot c$\\
+unten links: $0 \cdot c + a \cdot 0$ \hspace{2cm}
+unten rechts: $ 0 \cdot d + a \cdot c$\\\\
+$\begin{pmatrix}
+a \cdot c & a \cdot d + b \cdot c \\ 0 & a \cdot c
+\end{pmatrix}  \cdot \begin{pmatrix}
+e & f \\ 0 & e
+\end{pmatrix}$\\\\
+Terme:\\
+oben links $(a \cdot c) \cdot e + 0$ \hspace{2cm}
+oben rechts $a \cdot c \cdot f + (a \cdot d + b \cdot c) \cdot e$\\
+unten links: $0$ \hspace{2cm}
+unten rechts: $ 0 \cdot f + a \cdot c \cdot e$\\\\
+$\begin{pmatrix}
+	(a \cdot c) \cdot e & a \cdot c \cdot f + (a \cdot d + b \cdot c) \cdot e \\ 0 & a \cdot c \cdot e
+\end{pmatrix}$\\
+$\begin{pmatrix}
+a\cdot c \cdot e & a \cdot (c \cdot f + d \cdot e) + b \cdot c \cdot e \\ 0 & a \cdot c \cdot e
+\end{pmatrix}=\begin{pmatrix}
+(a \cdot c) \cdot e & a \cdot c \cdot f + (a \cdot d + b \cdot c) \cdot e \\ 0 & a \cdot c \cdot e
+\end{pmatrix}$\\
+$\begin{pmatrix}
+a\cdot c \cdot e & a \cdot c \cdot f + a \cdot d \cdot e + b \cdot c \cdot e \\ 0 & a \cdot c \cdot e
+\end{pmatrix}=\begin{pmatrix}
+(a \cdot c) \cdot e & a \cdot c \cdot f + a \cdot d \cdot e + b \cdot c \cdot e \\ 0 & a \cdot c \cdot e
+\end{pmatrix}$
+\end{enumerate}
+\end{document}
